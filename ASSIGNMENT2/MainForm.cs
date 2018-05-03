@@ -61,8 +61,52 @@ namespace ASSIGNMENT2
             this.AutoLowGoalBox.SelectedIndex = 0;
             this.PassBallBox.SelectedIndex = 0;
             this.AutoForwardBox.SelectedIndex = 0;
-          
+            this.MatchDriveForwardBox.SelectedIndex = 0;
+            this.MatchHighGoalAutoBox.SelectedIndex = 0;
+            this.MatchLowGoalAutoBox.SelectedIndex = 0;
+            this.MatchPassBallBox.SelectedIndex = 0;
+            this.MatchCatchBallBox.SelectedIndex = 0;
+            this.MatchCollectBallBox.SelectedIndex = 0;
+            this.MatchThrowOverBox.SelectedIndex = 0;
+            this.MatchLowGoalBox.SelectedIndex = 0;
+            this.MatchHighGoalBox.SelectedIndex = 0;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
+
         }
 
+        private void RobotPerRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = true;
+            MatchPerformanceGroupBox.Visible = false;
+        }
+
+        private void ScoutsDetailsRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = true;
+            HumanControlGroupBox.Visible = true;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
+        }
+
+        private void MatchPerformanceRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = true;
+        }
+
+        private void AddPictureButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string image = openFileDialog.FileName;
+                RobotPictureBox.Image = Image.FromFile(@image);
+            }
+        }
     }
 }
