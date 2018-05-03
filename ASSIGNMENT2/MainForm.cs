@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,6 +81,26 @@ namespace ASSIGNMENT2
         {
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            //before your loop
+            var csv = new StringBuilder();
+
+            //in your loop
+            var first = TeamNumberBox.Text;
+            var second = TeamNameBox.Text;
+            var newLine = string.Format("{0},{1}", first, second);
+            csv.AppendLine(newLine);
+
+            //after your loop
+            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "test" +".csv", csv.ToString());
+        }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

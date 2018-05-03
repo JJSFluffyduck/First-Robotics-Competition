@@ -55,6 +55,8 @@
             this.TeamDetailsGroupBox = new System.Windows.Forms.GroupBox();
             this.PreMatch = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.ImportButton = new System.Windows.Forms.Button();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
@@ -74,7 +76,7 @@
             "Yes",
             "No"});
             this.HighGoalBox.Location = new System.Drawing.Point(214, 290);
-            this.HighGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HighGoalBox.Margin = new System.Windows.Forms.Padding(4);
             this.HighGoalBox.Name = "HighGoalBox";
             this.HighGoalBox.Size = new System.Drawing.Size(300, 33);
             this.HighGoalBox.TabIndex = 13;
@@ -104,7 +106,7 @@
             "Yes",
             "No"});
             this.LowGoalBox.Location = new System.Drawing.Point(214, 244);
-            this.LowGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LowGoalBox.Margin = new System.Windows.Forms.Padding(4);
             this.LowGoalBox.Name = "LowGoalBox";
             this.LowGoalBox.Size = new System.Drawing.Size(300, 33);
             this.LowGoalBox.TabIndex = 11;
@@ -134,7 +136,7 @@
             "Yes",
             "No"});
             this.MiddleBarBox.Location = new System.Drawing.Point(214, 196);
-            this.MiddleBarBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MiddleBarBox.Margin = new System.Windows.Forms.Padding(4);
             this.MiddleBarBox.Name = "MiddleBarBox";
             this.MiddleBarBox.Size = new System.Drawing.Size(300, 33);
             this.MiddleBarBox.TabIndex = 9;
@@ -164,7 +166,7 @@
             "Yes",
             "No"});
             this.PickUpBallBox.Location = new System.Drawing.Point(214, 150);
-            this.PickUpBallBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PickUpBallBox.Margin = new System.Windows.Forms.Padding(4);
             this.PickUpBallBox.Name = "PickUpBallBox";
             this.PickUpBallBox.Size = new System.Drawing.Size(300, 33);
             this.PickUpBallBox.TabIndex = 7;
@@ -194,7 +196,7 @@
             "Yes",
             "No"});
             this.CatchBallBox.Location = new System.Drawing.Point(214, 104);
-            this.CatchBallBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CatchBallBox.Margin = new System.Windows.Forms.Padding(4);
             this.CatchBallBox.Name = "CatchBallBox";
             this.CatchBallBox.Size = new System.Drawing.Size(300, 33);
             this.CatchBallBox.TabIndex = 5;
@@ -224,7 +226,7 @@
             "Yes",
             "No"});
             this.PassBallBox.Location = new System.Drawing.Point(214, 56);
-            this.PassBallBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PassBallBox.Margin = new System.Windows.Forms.Padding(4);
             this.PassBallBox.Name = "PassBallBox";
             this.PassBallBox.Size = new System.Drawing.Size(300, 33);
             this.PassBallBox.TabIndex = 3;
@@ -257,9 +259,9 @@
             this.HumanControlGroupBox.Controls.Add(this.PassBallBox);
             this.HumanControlGroupBox.Controls.Add(this.PassBallLabel);
             this.HumanControlGroupBox.Location = new System.Drawing.Point(34, 440);
-            this.HumanControlGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HumanControlGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.HumanControlGroupBox.Name = "HumanControlGroupBox";
-            this.HumanControlGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HumanControlGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.HumanControlGroupBox.Size = new System.Drawing.Size(546, 348);
             this.HumanControlGroupBox.TabIndex = 5;
             this.HumanControlGroupBox.TabStop = false;
@@ -279,7 +281,7 @@
             "Yes",
             "No"});
             this.AutoHighGoalBox.Location = new System.Drawing.Point(214, 154);
-            this.AutoHighGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AutoHighGoalBox.Margin = new System.Windows.Forms.Padding(4);
             this.AutoHighGoalBox.Name = "AutoHighGoalBox";
             this.AutoHighGoalBox.Size = new System.Drawing.Size(300, 33);
             this.AutoHighGoalBox.TabIndex = 7;
@@ -309,7 +311,7 @@
             "Yes",
             "No"});
             this.AutoLowGoalBox.Location = new System.Drawing.Point(214, 104);
-            this.AutoLowGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AutoLowGoalBox.Margin = new System.Windows.Forms.Padding(4);
             this.AutoLowGoalBox.Name = "AutoLowGoalBox";
             this.AutoLowGoalBox.Size = new System.Drawing.Size(300, 33);
             this.AutoLowGoalBox.TabIndex = 4;
@@ -339,7 +341,7 @@
             "Yes",
             "No"});
             this.AutoForwardBox.Location = new System.Drawing.Point(214, 56);
-            this.AutoForwardBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AutoForwardBox.Margin = new System.Windows.Forms.Padding(4);
             this.AutoForwardBox.Name = "AutoForwardBox";
             this.AutoForwardBox.Size = new System.Drawing.Size(300, 33);
             this.AutoForwardBox.TabIndex = 3;
@@ -356,9 +358,9 @@
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoForwardBox);
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoForwardLabel);
             this.AutonomousDetailsGroupBox.Location = new System.Drawing.Point(34, 210);
-            this.AutonomousDetailsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AutonomousDetailsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.AutonomousDetailsGroupBox.Name = "AutonomousDetailsGroupBox";
-            this.AutonomousDetailsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AutonomousDetailsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.AutonomousDetailsGroupBox.Size = new System.Drawing.Size(546, 223);
             this.AutonomousDetailsGroupBox.TabIndex = 4;
             this.AutonomousDetailsGroupBox.TabStop = false;
@@ -380,7 +382,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TeamNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TeamNameBox.Location = new System.Drawing.Point(214, 94);
-            this.TeamNameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.TeamNameBox.Name = "TeamNameBox";
             this.TeamNameBox.Size = new System.Drawing.Size(300, 31);
             this.TeamNameBox.TabIndex = 2;
@@ -401,7 +403,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TeamNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TeamNumberBox.Location = new System.Drawing.Point(214, 50);
-            this.TeamNumberBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamNumberBox.Margin = new System.Windows.Forms.Padding(4);
             this.TeamNumberBox.Name = "TeamNumberBox";
             this.TeamNumberBox.Size = new System.Drawing.Size(300, 31);
             this.TeamNumberBox.TabIndex = 1;
@@ -426,9 +428,9 @@
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNumberBox);
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNumberLabel);
             this.TeamDetailsGroupBox.Location = new System.Drawing.Point(34, 40);
-            this.TeamDetailsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamDetailsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.TeamDetailsGroupBox.Name = "TeamDetailsGroupBox";
-            this.TeamDetailsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamDetailsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.TeamDetailsGroupBox.Size = new System.Drawing.Size(546, 162);
             this.TeamDetailsGroupBox.TabIndex = 3;
             this.TeamDetailsGroupBox.TabStop = false;
@@ -459,17 +461,39 @@
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(248, 819);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(146, 67);
+            this.SaveButton.TabIndex = 8;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // ImportButton
+            // 
+            this.ImportButton.Location = new System.Drawing.Point(411, 819);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(137, 71);
+            this.ImportButton.TabIndex = 9;
+            this.ImportButton.Text = "Import";
+            this.ImportButton.UseVisualStyleBackColor = true;
+            this.ImportButton.Click += new System.EventHandler(this.ImportButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 829);
+            this.ClientSize = new System.Drawing.Size(614, 926);
+            this.Controls.Add(this.ImportButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.PreMatch);
             this.Controls.Add(this.HumanControlGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
             this.Controls.Add(this.TeamDetailsGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(620, 838);
             this.Name = "MainForm";
             this.Text = "Aerial Assist Scouting";
@@ -512,5 +536,7 @@
         internal System.Windows.Forms.GroupBox TeamDetailsGroupBox;
         private System.Windows.Forms.RadioButton PreMatch;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button ImportButton;
     }
 }
