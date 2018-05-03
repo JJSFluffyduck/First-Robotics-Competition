@@ -64,5 +64,22 @@ namespace ASSIGNMENT2
           
         }
 
+        private void TeamDetailsGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = true;
+            HumanControlGroupBox.Visible = true;
+
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+        }
     }
 }
