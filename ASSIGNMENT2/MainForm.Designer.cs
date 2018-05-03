@@ -682,6 +682,7 @@
             this.MatchHighGoalBox.Name = "MatchHighGoalBox";
             this.MatchHighGoalBox.Size = new System.Drawing.Size(188, 21);
             this.MatchHighGoalBox.TabIndex = 18;
+            this.MatchHighGoalBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchLowGoalBox
             // 
@@ -701,6 +702,7 @@
             this.MatchLowGoalBox.Name = "MatchLowGoalBox";
             this.MatchLowGoalBox.Size = new System.Drawing.Size(188, 21);
             this.MatchLowGoalBox.TabIndex = 17;
+            this.MatchLowGoalBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchThrowOverBox
             // 
@@ -720,6 +722,7 @@
             this.MatchThrowOverBox.Name = "MatchThrowOverBox";
             this.MatchThrowOverBox.Size = new System.Drawing.Size(188, 21);
             this.MatchThrowOverBox.TabIndex = 16;
+            this.MatchThrowOverBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchLowGoalLabel
             // 
@@ -769,6 +772,7 @@
             this.MatchCollectBallBox.Name = "MatchCollectBallBox";
             this.MatchCollectBallBox.Size = new System.Drawing.Size(188, 21);
             this.MatchCollectBallBox.TabIndex = 13;
+            this.MatchCollectBallBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchCollectBallLabel
             // 
@@ -798,6 +802,7 @@
             this.MatchCatchBallBox.Name = "MatchCatchBallBox";
             this.MatchCatchBallBox.Size = new System.Drawing.Size(188, 21);
             this.MatchCatchBallBox.TabIndex = 11;
+            this.MatchCatchBallBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchCatchBallLabel
             // 
@@ -827,6 +832,7 @@
             this.MatchPassBallBox.Name = "MatchPassBallBox";
             this.MatchPassBallBox.Size = new System.Drawing.Size(188, 21);
             this.MatchPassBallBox.TabIndex = 10;
+            this.MatchPassBallBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchPassBallLabel
             // 
@@ -856,6 +862,7 @@
             this.MatchHighGoalAutoBox.Name = "MatchHighGoalAutoBox";
             this.MatchHighGoalAutoBox.Size = new System.Drawing.Size(188, 21);
             this.MatchHighGoalAutoBox.TabIndex = 7;
+            this.MatchHighGoalAutoBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchHighGoalAutoLable
             // 
@@ -885,6 +892,7 @@
             this.MatchLowGoalAutoBox.Name = "MatchLowGoalAutoBox";
             this.MatchLowGoalAutoBox.Size = new System.Drawing.Size(188, 21);
             this.MatchLowGoalAutoBox.TabIndex = 4;
+            this.MatchLowGoalAutoBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchLowGoalAutoLabel
             // 
@@ -914,6 +922,7 @@
             this.MatchDriveForwardBox.Name = "MatchDriveForwardBox";
             this.MatchDriveForwardBox.Size = new System.Drawing.Size(188, 21);
             this.MatchDriveForwardBox.TabIndex = 3;
+            this.MatchDriveForwardBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
             // MatchDriveForwardLabel
             // 
