@@ -64,5 +64,9 @@ namespace ASSIGNMENT2
           
         }
 
+        private void TeamDetailsGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
