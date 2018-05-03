@@ -84,6 +84,9 @@
             this.MatchDriveForwardBox = new System.Windows.Forms.ComboBox();
             this.MatchDriveForwardLabel = new System.Windows.Forms.Label();
             this.MatchPerformanceRadioButton = new System.Windows.Forms.RadioButton();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
+            this.RobotDescriptionBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
@@ -448,7 +451,6 @@
             // 
             this.TeamDetailsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TeamDetailsGroupBox.Controls.Add(this.RobotGroupBox);
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNameBox);
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNameLabel);
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNumberBox);
@@ -466,6 +468,9 @@
             // 
             this.RobotGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.RobotGroupBox.Controls.Add(this.label1);
+            this.RobotGroupBox.Controls.Add(this.RobotDescriptionBox);
+            this.RobotGroupBox.Controls.Add(this.DescriptionLabel);
             this.RobotGroupBox.Controls.Add(this.OverallAttackBox);
             this.RobotGroupBox.Controls.Add(this.OverallAttackLabel);
             this.RobotGroupBox.Controls.Add(this.SpeedBox);
@@ -474,11 +479,11 @@
             this.RobotGroupBox.Controls.Add(this.ManeuverabilityLabel);
             this.RobotGroupBox.Controls.Add(this.OverallDefenseBox);
             this.RobotGroupBox.Controls.Add(this.OverallDefenseLabel);
-            this.RobotGroupBox.Location = new System.Drawing.Point(0, 88);
+            this.RobotGroupBox.Location = new System.Drawing.Point(17, 109);
             this.RobotGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.RobotGroupBox.Name = "RobotGroupBox";
             this.RobotGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.RobotGroupBox.Size = new System.Drawing.Size(309, 192);
+            this.RobotGroupBox.Size = new System.Drawing.Size(309, 220);
             this.RobotGroupBox.TabIndex = 8;
             this.RobotGroupBox.TabStop = false;
             this.RobotGroupBox.Text = "Robot\'s Performance";
@@ -600,7 +605,7 @@
             // OverallDefenseLabel
             // 
             this.OverallDefenseLabel.Location = new System.Drawing.Point(14, 29);
-            this.OverallDefenseLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OverallDefenseLabel.Margin = new System.Windows.Forms.Padding(2);
             this.OverallDefenseLabel.Name = "OverallDefenseLabel";
             this.OverallDefenseLabel.Size = new System.Drawing.Size(88, 19);
             this.OverallDefenseLabel.TabIndex = 0;
@@ -947,11 +952,43 @@
             this.MatchPerformanceRadioButton.UseVisualStyleBackColor = true;
             this.MatchPerformanceRadioButton.CheckedChanged += new System.EventHandler(this.MatchPerformanceRadioButton_CheckedChanged);
             // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.Location = new System.Drawing.Point(15, 130);
+            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(88, 19);
+            this.DescriptionLabel.TabIndex = 10;
+            this.DescriptionLabel.Text = "Description";
+            this.DescriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // RobotDescriptionBox
+            // 
+            this.RobotDescriptionBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RobotDescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RobotDescriptionBox.Location = new System.Drawing.Point(106, 132);
+            this.RobotDescriptionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RobotDescriptionBox.Name = "RobotDescriptionBox";
+            this.RobotDescriptionBox.Size = new System.Drawing.Size(189, 20);
+            this.RobotDescriptionBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(14, 174);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Robot\'s  Picture";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 474);
+            this.Controls.Add(this.RobotGroupBox);
             this.Controls.Add(this.MatchPerformanceRadioButton);
             this.Controls.Add(this.MatchPerformanceGroupBox);
             this.Controls.Add(this.ScoutsDetailsRadioButton);
@@ -968,6 +1005,7 @@
             this.TeamDetailsGroupBox.ResumeLayout(false);
             this.TeamDetailsGroupBox.PerformLayout();
             this.RobotGroupBox.ResumeLayout(false);
+            this.RobotGroupBox.PerformLayout();
             this.MatchPerformanceGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1032,5 +1070,8 @@
         internal System.Windows.Forms.Label MatchLowGoalLabel;
         internal System.Windows.Forms.Label MatchHighGoalLabel;
         internal System.Windows.Forms.Label MatchThrowOverLabel;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox RobotDescriptionBox;
+        internal System.Windows.Forms.Label DescriptionLabel;
     }
 }
