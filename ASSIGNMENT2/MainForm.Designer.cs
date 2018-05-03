@@ -74,7 +74,7 @@
             this.HighGoalBox.Location = new System.Drawing.Point(107, 151);
             this.HighGoalBox.Margin = new System.Windows.Forms.Padding(2);
             this.HighGoalBox.Name = "HighGoalBox";
-            this.HighGoalBox.Size = new System.Drawing.Size(152, 21);
+            this.HighGoalBox.Size = new System.Drawing.Size(429, 21);
             this.HighGoalBox.TabIndex = 13;
             this.HighGoalBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -104,7 +104,7 @@
             this.LowGoalBox.Location = new System.Drawing.Point(107, 127);
             this.LowGoalBox.Margin = new System.Windows.Forms.Padding(2);
             this.LowGoalBox.Name = "LowGoalBox";
-            this.LowGoalBox.Size = new System.Drawing.Size(152, 21);
+            this.LowGoalBox.Size = new System.Drawing.Size(429, 21);
             this.LowGoalBox.TabIndex = 11;
             this.LowGoalBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -134,7 +134,7 @@
             this.MiddleBarBox.Location = new System.Drawing.Point(107, 102);
             this.MiddleBarBox.Margin = new System.Windows.Forms.Padding(2);
             this.MiddleBarBox.Name = "MiddleBarBox";
-            this.MiddleBarBox.Size = new System.Drawing.Size(152, 21);
+            this.MiddleBarBox.Size = new System.Drawing.Size(429, 21);
             this.MiddleBarBox.TabIndex = 9;
             this.MiddleBarBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -164,7 +164,7 @@
             this.PickUpBallBox.Location = new System.Drawing.Point(107, 78);
             this.PickUpBallBox.Margin = new System.Windows.Forms.Padding(2);
             this.PickUpBallBox.Name = "PickUpBallBox";
-            this.PickUpBallBox.Size = new System.Drawing.Size(152, 21);
+            this.PickUpBallBox.Size = new System.Drawing.Size(429, 21);
             this.PickUpBallBox.TabIndex = 7;
             this.PickUpBallBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -194,7 +194,7 @@
             this.CatchBallBox.Location = new System.Drawing.Point(107, 54);
             this.CatchBallBox.Margin = new System.Windows.Forms.Padding(2);
             this.CatchBallBox.Name = "CatchBallBox";
-            this.CatchBallBox.Size = new System.Drawing.Size(152, 21);
+            this.CatchBallBox.Size = new System.Drawing.Size(429, 21);
             this.CatchBallBox.TabIndex = 5;
             this.CatchBallBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -224,7 +224,7 @@
             this.PassBallBox.Location = new System.Drawing.Point(107, 29);
             this.PassBallBox.Margin = new System.Windows.Forms.Padding(2);
             this.PassBallBox.Name = "PassBallBox";
-            this.PassBallBox.Size = new System.Drawing.Size(152, 21);
+            this.PassBallBox.Size = new System.Drawing.Size(429, 21);
             this.PassBallBox.TabIndex = 3;
             this.PassBallBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -258,7 +258,7 @@
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.GroupBox1.Size = new System.Drawing.Size(273, 181);
+            this.GroupBox1.Size = new System.Drawing.Size(550, 181);
             this.GroupBox1.TabIndex = 5;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Autonomous Details";
@@ -279,7 +279,7 @@
             this.AutoHighGoalBox.Location = new System.Drawing.Point(107, 80);
             this.AutoHighGoalBox.Margin = new System.Windows.Forms.Padding(2);
             this.AutoHighGoalBox.Name = "AutoHighGoalBox";
-            this.AutoHighGoalBox.Size = new System.Drawing.Size(152, 21);
+            this.AutoHighGoalBox.Size = new System.Drawing.Size(429, 21);
             this.AutoHighGoalBox.TabIndex = 7;
             this.AutoHighGoalBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -309,7 +309,7 @@
             this.AutoLowGoalBox.Location = new System.Drawing.Point(107, 54);
             this.AutoLowGoalBox.Margin = new System.Windows.Forms.Padding(2);
             this.AutoLowGoalBox.Name = "AutoLowGoalBox";
-            this.AutoLowGoalBox.Size = new System.Drawing.Size(152, 21);
+            this.AutoLowGoalBox.Size = new System.Drawing.Size(429, 21);
             this.AutoLowGoalBox.TabIndex = 4;
             this.AutoLowGoalBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -339,7 +339,7 @@
             this.AutoForwardBox.Location = new System.Drawing.Point(107, 29);
             this.AutoForwardBox.Margin = new System.Windows.Forms.Padding(2);
             this.AutoForwardBox.Name = "AutoForwardBox";
-            this.AutoForwardBox.Size = new System.Drawing.Size(152, 21);
+            this.AutoForwardBox.Size = new System.Drawing.Size(429, 21);
             this.AutoForwardBox.TabIndex = 3;
             this.AutoForwardBox.SelectedValueChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
             // 
@@ -357,7 +357,7 @@
             this.AutonomousDetailsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.AutonomousDetailsGroupBox.Name = "AutonomousDetailsGroupBox";
             this.AutonomousDetailsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.AutonomousDetailsGroupBox.Size = new System.Drawing.Size(273, 116);
+            this.AutonomousDetailsGroupBox.Size = new System.Drawing.Size(550, 116);
             this.AutonomousDetailsGroupBox.TabIndex = 4;
             this.AutonomousDetailsGroupBox.TabStop = false;
             this.AutonomousDetailsGroupBox.Text = "Autonomous Details";
@@ -374,13 +374,11 @@
             // 
             // TeamNameBox
             // 
-            this.TeamNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TeamNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TeamNameBox.Location = new System.Drawing.Point(107, 49);
             this.TeamNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.TeamNameBox.Name = "TeamNameBox";
-            this.TeamNameBox.Size = new System.Drawing.Size(151, 20);
+            this.TeamNameBox.Size = new System.Drawing.Size(145, 20);
             this.TeamNameBox.TabIndex = 2;
             // 
             // TeamNameLabel
@@ -395,13 +393,11 @@
             // 
             // TeamNumberBox
             // 
-            this.TeamNumberBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TeamNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TeamNumberBox.Location = new System.Drawing.Point(107, 26);
             this.TeamNumberBox.Margin = new System.Windows.Forms.Padding(2);
             this.TeamNumberBox.Name = "TeamNumberBox";
-            this.TeamNumberBox.Size = new System.Drawing.Size(151, 20);
+            this.TeamNumberBox.Size = new System.Drawing.Size(145, 20);
             this.TeamNumberBox.TabIndex = 1;
             this.TeamNumberBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TeamNumberBox_KeyPress);
             // 
@@ -417,8 +413,6 @@
             // 
             // TeamDetailsGroupBox
             // 
-            this.TeamDetailsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNameBox);
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNameLabel);
             this.TeamDetailsGroupBox.Controls.Add(this.TeamNumberBox);
@@ -427,7 +421,7 @@
             this.TeamDetailsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.TeamDetailsGroupBox.Name = "TeamDetailsGroupBox";
             this.TeamDetailsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.TeamDetailsGroupBox.Size = new System.Drawing.Size(273, 84);
+            this.TeamDetailsGroupBox.Size = new System.Drawing.Size(271, 84);
             this.TeamDetailsGroupBox.TabIndex = 3;
             this.TeamDetailsGroupBox.TabStop = false;
             this.TeamDetailsGroupBox.Text = "Team Details";
@@ -436,11 +430,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 431);
+            this.ClientSize = new System.Drawing.Size(584, 431);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
             this.Controls.Add(this.TeamDetailsGroupBox);
-            this.MinimumSize = new System.Drawing.Size(323, 470);
+            this.MinimumSize = new System.Drawing.Size(600, 470);
             this.Name = "MainForm";
             this.Text = "Aerial Assist Scouting";
             this.Load += new System.EventHandler(this.MainForm_Load);
