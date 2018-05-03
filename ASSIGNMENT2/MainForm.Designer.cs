@@ -54,6 +54,9 @@
             this.TeamNumberLabel = new System.Windows.Forms.Label();
             this.TeamDetailsGroupBox = new System.Windows.Forms.GroupBox();
             this.RobotGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RobotDescriptionBox = new System.Windows.Forms.TextBox();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
             this.OverallAttackBox = new System.Windows.Forms.ComboBox();
             this.OverallAttackLabel = new System.Windows.Forms.Label();
             this.SpeedBox = new System.Windows.Forms.ComboBox();
@@ -84,14 +87,14 @@
             this.MatchDriveForwardBox = new System.Windows.Forms.ComboBox();
             this.MatchDriveForwardLabel = new System.Windows.Forms.Label();
             this.MatchPerformanceRadioButton = new System.Windows.Forms.RadioButton();
-            this.DescriptionLabel = new System.Windows.Forms.Label();
-            this.RobotDescriptionBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RobotPictureBox = new System.Windows.Forms.PictureBox();
+            this.AddPictureButton = new System.Windows.Forms.Button();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
             this.RobotGroupBox.SuspendLayout();
             this.MatchPerformanceGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RobotPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // HighGoalBox
@@ -468,6 +471,8 @@
             // 
             this.RobotGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.RobotGroupBox.Controls.Add(this.AddPictureButton);
+            this.RobotGroupBox.Controls.Add(this.RobotPictureBox);
             this.RobotGroupBox.Controls.Add(this.label1);
             this.RobotGroupBox.Controls.Add(this.RobotDescriptionBox);
             this.RobotGroupBox.Controls.Add(this.DescriptionLabel);
@@ -483,10 +488,41 @@
             this.RobotGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.RobotGroupBox.Name = "RobotGroupBox";
             this.RobotGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.RobotGroupBox.Size = new System.Drawing.Size(309, 220);
+            this.RobotGroupBox.Size = new System.Drawing.Size(309, 301);
             this.RobotGroupBox.TabIndex = 8;
             this.RobotGroupBox.TabStop = false;
             this.RobotGroupBox.Text = "Robot\'s Performance";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(15, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Robot\'s  Picture";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // RobotDescriptionBox
+            // 
+            this.RobotDescriptionBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RobotDescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RobotDescriptionBox.Location = new System.Drawing.Point(106, 132);
+            this.RobotDescriptionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RobotDescriptionBox.Name = "RobotDescriptionBox";
+            this.RobotDescriptionBox.Size = new System.Drawing.Size(189, 20);
+            this.RobotDescriptionBox.TabIndex = 3;
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.Location = new System.Drawing.Point(15, 130);
+            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(88, 19);
+            this.DescriptionLabel.TabIndex = 10;
+            this.DescriptionLabel.Text = "Description";
+            this.DescriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // OverallAttackBox
             // 
@@ -952,36 +988,23 @@
             this.MatchPerformanceRadioButton.UseVisualStyleBackColor = true;
             this.MatchPerformanceRadioButton.CheckedChanged += new System.EventHandler(this.MatchPerformanceRadioButton_CheckedChanged);
             // 
-            // DescriptionLabel
+            // RobotPictureBox
             // 
-            this.DescriptionLabel.Location = new System.Drawing.Point(15, 130);
-            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(88, 19);
-            this.DescriptionLabel.TabIndex = 10;
-            this.DescriptionLabel.Text = "Description";
-            this.DescriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RobotPictureBox.Location = new System.Drawing.Point(106, 160);
+            this.RobotPictureBox.Name = "RobotPictureBox";
+            this.RobotPictureBox.Size = new System.Drawing.Size(189, 130);
+            this.RobotPictureBox.TabIndex = 12;
+            this.RobotPictureBox.TabStop = false;
             // 
-            // RobotDescriptionBox
+            // AddPictureButton
             // 
-            this.RobotDescriptionBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RobotDescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RobotDescriptionBox.Location = new System.Drawing.Point(106, 132);
-            this.RobotDescriptionBox.Margin = new System.Windows.Forms.Padding(2);
-            this.RobotDescriptionBox.Name = "RobotDescriptionBox";
-            this.RobotDescriptionBox.Size = new System.Drawing.Size(189, 20);
-            this.RobotDescriptionBox.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(14, 174);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Robot\'s  Picture";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddPictureButton.Location = new System.Drawing.Point(16, 217);
+            this.AddPictureButton.Name = "AddPictureButton";
+            this.AddPictureButton.Size = new System.Drawing.Size(84, 24);
+            this.AddPictureButton.TabIndex = 13;
+            this.AddPictureButton.Text = "Add Picture";
+            this.AddPictureButton.UseVisualStyleBackColor = true;
+            this.AddPictureButton.Click += new System.EventHandler(this.AddPictureButton_Click);
             // 
             // MainForm
             // 
@@ -1007,6 +1030,7 @@
             this.RobotGroupBox.ResumeLayout(false);
             this.RobotGroupBox.PerformLayout();
             this.MatchPerformanceGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RobotPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1073,5 +1097,7 @@
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox RobotDescriptionBox;
         internal System.Windows.Forms.Label DescriptionLabel;
+        private System.Windows.Forms.Button AddPictureButton;
+        private System.Windows.Forms.PictureBox RobotPictureBox;
     }
 }

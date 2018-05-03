@@ -98,5 +98,15 @@ namespace ASSIGNMENT2
             RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = true;
         }
+
+        private void AddPictureButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string image = openFileDialog.FileName;
+                RobotPictureBox.Image = Image.FromFile(@image);
+            }
+        }
     }
 }
