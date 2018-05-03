@@ -40,7 +40,7 @@
             this.CatchBallLabel = new System.Windows.Forms.Label();
             this.PassBallBox = new System.Windows.Forms.ComboBox();
             this.PassBallLabel = new System.Windows.Forms.Label();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.HumanControlGroupBox = new System.Windows.Forms.GroupBox();
             this.AutoHighGoalBox = new System.Windows.Forms.ComboBox();
             this.AutoHighGoalLabel = new System.Windows.Forms.Label();
             this.AutoLowGoalBox = new System.Windows.Forms.ComboBox();
@@ -53,7 +53,9 @@
             this.TeamNumberBox = new System.Windows.Forms.TextBox();
             this.TeamNumberLabel = new System.Windows.Forms.Label();
             this.TeamDetailsGroupBox = new System.Windows.Forms.GroupBox();
-            this.GroupBox1.SuspendLayout();
+            this.PreMatch = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -238,30 +240,30 @@
             this.PassBallLabel.Text = "Pass Ball";
             this.PassBallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // GroupBox1
+            // HumanControlGroupBox
             // 
-            this.GroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.HumanControlGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupBox1.Controls.Add(this.HighGoalBox);
-            this.GroupBox1.Controls.Add(this.HighGoalLabel);
-            this.GroupBox1.Controls.Add(this.LowGoalBox);
-            this.GroupBox1.Controls.Add(this.LowGoalLabel);
-            this.GroupBox1.Controls.Add(this.MiddleBarBox);
-            this.GroupBox1.Controls.Add(this.MiddleBarLabel);
-            this.GroupBox1.Controls.Add(this.PickUpBallBox);
-            this.GroupBox1.Controls.Add(this.PickUpBallLabel);
-            this.GroupBox1.Controls.Add(this.CatchBallBox);
-            this.GroupBox1.Controls.Add(this.CatchBallLabel);
-            this.GroupBox1.Controls.Add(this.PassBallBox);
-            this.GroupBox1.Controls.Add(this.PassBallLabel);
-            this.GroupBox1.Location = new System.Drawing.Point(34, 440);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBox1.Size = new System.Drawing.Size(546, 348);
-            this.GroupBox1.TabIndex = 5;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Autonomous Details";
+            this.HumanControlGroupBox.Controls.Add(this.HighGoalBox);
+            this.HumanControlGroupBox.Controls.Add(this.HighGoalLabel);
+            this.HumanControlGroupBox.Controls.Add(this.LowGoalBox);
+            this.HumanControlGroupBox.Controls.Add(this.LowGoalLabel);
+            this.HumanControlGroupBox.Controls.Add(this.MiddleBarBox);
+            this.HumanControlGroupBox.Controls.Add(this.MiddleBarLabel);
+            this.HumanControlGroupBox.Controls.Add(this.PickUpBallBox);
+            this.HumanControlGroupBox.Controls.Add(this.PickUpBallLabel);
+            this.HumanControlGroupBox.Controls.Add(this.CatchBallBox);
+            this.HumanControlGroupBox.Controls.Add(this.CatchBallLabel);
+            this.HumanControlGroupBox.Controls.Add(this.PassBallBox);
+            this.HumanControlGroupBox.Controls.Add(this.PassBallLabel);
+            this.HumanControlGroupBox.Location = new System.Drawing.Point(34, 440);
+            this.HumanControlGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HumanControlGroupBox.Name = "HumanControlGroupBox";
+            this.HumanControlGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HumanControlGroupBox.Size = new System.Drawing.Size(546, 348);
+            this.HumanControlGroupBox.TabIndex = 5;
+            this.HumanControlGroupBox.TabStop = false;
+            this.HumanControlGroupBox.Text = "Human Control Details";
             // 
             // AutoHighGoalBox
             // 
@@ -433,12 +435,38 @@
             this.TeamDetailsGroupBox.Text = "Team Detailz";
             this.TeamDetailsGroupBox.Enter += new System.EventHandler(this.TeamDetailsGroupBox_Enter);
             // 
+            // PreMatch
+            // 
+            this.PreMatch.AutoSize = true;
+            this.PreMatch.Location = new System.Drawing.Point(302, 12);
+            this.PreMatch.Name = "PreMatch";
+            this.PreMatch.Size = new System.Drawing.Size(141, 29);
+            this.PreMatch.TabIndex = 6;
+            this.PreMatch.TabStop = true;
+            this.PreMatch.Text = "Pre-match";
+            this.PreMatch.UseVisualStyleBackColor = true;
+            this.PreMatch.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(449, 12);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(170, 29);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "During match";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 829);
-            this.Controls.Add(this.GroupBox1);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.PreMatch);
+            this.Controls.Add(this.HumanControlGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
             this.Controls.Add(this.TeamDetailsGroupBox);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -446,11 +474,12 @@
             this.Name = "MainForm";
             this.Text = "Aerial Assist Scouting";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.GroupBox1.ResumeLayout(false);
+            this.HumanControlGroupBox.ResumeLayout(false);
             this.AutonomousDetailsGroupBox.ResumeLayout(false);
             this.TeamDetailsGroupBox.ResumeLayout(false);
             this.TeamDetailsGroupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -468,7 +497,7 @@
         internal System.Windows.Forms.Label CatchBallLabel;
         internal System.Windows.Forms.ComboBox PassBallBox;
         internal System.Windows.Forms.Label PassBallLabel;
-        internal System.Windows.Forms.GroupBox GroupBox1;
+        internal System.Windows.Forms.GroupBox HumanControlGroupBox;
         internal System.Windows.Forms.ComboBox AutoHighGoalBox;
         internal System.Windows.Forms.Label AutoHighGoalLabel;
         internal System.Windows.Forms.ComboBox AutoLowGoalBox;
@@ -481,5 +510,7 @@
         internal System.Windows.Forms.TextBox TeamNumberBox;
         internal System.Windows.Forms.Label TeamNumberLabel;
         internal System.Windows.Forms.GroupBox TeamDetailsGroupBox;
+        private System.Windows.Forms.RadioButton PreMatch;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

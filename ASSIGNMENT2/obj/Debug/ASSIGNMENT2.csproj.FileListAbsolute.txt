@@ -17,3 +17,13 @@ C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.cs
 C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.csproj.CoreCompileInputs.cache
 C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.exe
 C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.pdb
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\bin\Debug\ASSIGNMENT2.exe.config
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\bin\Debug\ASSIGNMENT2.exe
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\bin\Debug\ASSIGNMENT2.pdb
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.csprojResolveAssemblyReference.cache
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.MainForm.resources
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.Properties.Resources.resources
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.csproj.GenerateResource.cache
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.csproj.CoreCompileInputs.cache
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.exe
+C:\Users\jackh\Uni\Agile\Robots\ASSIGNMENT2\obj\Debug\ASSIGNMENT2.pdb
