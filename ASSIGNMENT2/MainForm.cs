@@ -75,7 +75,8 @@ namespace ASSIGNMENT2
             MatchPerformanceGroupBox.Visible = false;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
-
+            TeamDetailsGroupBox.Visible = false;
+            MenuGroupBox.Visible = true;
         }
 
         private void AddPictureButton_Click(object sender, EventArgs e)
@@ -85,6 +86,7 @@ namespace ASSIGNMENT2
             {
                 string image = openFileDialog.FileName;
                 RobotPictureBox.Image = Image.FromFile(@image);
+                RobotCopyPictureBox.Image = Image.FromFile(@image);
             }
         }
 
@@ -134,6 +136,8 @@ namespace ASSIGNMENT2
 
         private void RobotPerformanceButton_Click(object sender, EventArgs e)
         {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = true;
@@ -142,6 +146,8 @@ namespace ASSIGNMENT2
 
         private void ScoutsDetailsButton_Click(object sender, EventArgs e)
         {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = true;
             HumanControlGroupBox.Visible = true;
             RobotGroupBox.Visible = false;
@@ -150,6 +156,8 @@ namespace ASSIGNMENT2
 
         private void MatchPerformanceButton_Click(object sender, EventArgs e)
         {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = false;
