@@ -53,7 +53,7 @@
             this.TeamNumberBox = new System.Windows.Forms.TextBox();
             this.TeamNumberLabel = new System.Windows.Forms.Label();
             this.TeamDetailsGroupBox = new System.Windows.Forms.GroupBox();
-            this.PreMatch = new System.Windows.Forms.RadioButton();
+            this.PreMatchCheck = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.SaveButton = new System.Windows.Forms.Button();
             this.ImportButton = new System.Windows.Forms.Button();
@@ -437,17 +437,18 @@
             this.TeamDetailsGroupBox.Text = "Team Detailz";
             this.TeamDetailsGroupBox.Enter += new System.EventHandler(this.TeamDetailsGroupBox_Enter);
             // 
-            // PreMatch
+            // PreMatchCheck
             // 
-            this.PreMatch.AutoSize = true;
-            this.PreMatch.Location = new System.Drawing.Point(302, 12);
-            this.PreMatch.Name = "PreMatch";
-            this.PreMatch.Size = new System.Drawing.Size(141, 29);
-            this.PreMatch.TabIndex = 6;
-            this.PreMatch.TabStop = true;
-            this.PreMatch.Text = "Pre-match";
-            this.PreMatch.UseVisualStyleBackColor = true;
-            this.PreMatch.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.PreMatchCheck.AutoSize = true;
+            this.PreMatchCheck.Checked = true;
+            this.PreMatchCheck.Location = new System.Drawing.Point(302, 12);
+            this.PreMatchCheck.Name = "PreMatchCheck";
+            this.PreMatchCheck.Size = new System.Drawing.Size(141, 29);
+            this.PreMatchCheck.TabIndex = 6;
+            this.PreMatchCheck.TabStop = true;
+            this.PreMatchCheck.Text = "Pre-match";
+            this.PreMatchCheck.UseVisualStyleBackColor = true;
+            this.PreMatchCheck.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -456,7 +457,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(170, 29);
             this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "During match";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
@@ -489,7 +489,7 @@
             this.Controls.Add(this.ImportButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.PreMatch);
+            this.Controls.Add(this.PreMatchCheck);
             this.Controls.Add(this.HumanControlGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
             this.Controls.Add(this.TeamDetailsGroupBox);
@@ -534,7 +534,7 @@
         internal System.Windows.Forms.TextBox TeamNumberBox;
         internal System.Windows.Forms.Label TeamNumberLabel;
         internal System.Windows.Forms.GroupBox TeamDetailsGroupBox;
-        private System.Windows.Forms.RadioButton PreMatch;
+        private System.Windows.Forms.RadioButton PreMatchCheck;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button ImportButton;

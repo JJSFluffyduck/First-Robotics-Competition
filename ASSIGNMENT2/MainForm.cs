@@ -89,13 +89,32 @@ namespace ASSIGNMENT2
             var csv = new StringBuilder();
 
             //in your loop
-            var first = TeamNumberBox.Text;
-            var second = TeamNameBox.Text;
-            var newLine = string.Format("{0},{1}", first, second);
+            var TeamNumber = TeamNumberBox.Text;
+            var TeamName = TeamNameBox.Text;
+
+            var AutoForward = AutoForwardBox.Text;
+            var AutoLow = AutoLowGoalBox.Text;
+            var AutoHigh = AutoHighGoalBox.Text;
+
+            var HumanPass = PassBallBox.Text;
+            var HumanCatch = CatchBallBox.Text;
+            var HumanPickUp = PickUpBallBox.Text;
+            var HumanMiddle = MiddleBarBox.Text;
+            var HumanLow = LowGoalBox.Text;
+            var HumanHigh = HighGoalBox.Text;
+
+            var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", TeamNumber, TeamName, AutoForward, AutoLow, AutoHigh,HumanPass, HumanCatch, HumanPickUp, HumanMiddle,HumanLow,HumanHigh);
             csv.AppendLine(newLine);
 
             //after your loop
-            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "test" +".csv", csv.ToString());
+            if (PreMatchCheck.Checked)
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "PreGame" + ".csv", csv.ToString());
+            }
+            else
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
+            }
         }
 
         private void ImportButton_Click(object sender, EventArgs e)
