@@ -112,6 +112,16 @@ namespace ASSIGNMENT2
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExportMenuButton_Click(object sender, EventArgs e)
+        {
             //before your loop
             var csv = new StringBuilder();
 
@@ -130,7 +140,7 @@ namespace ASSIGNMENT2
             var HumanLow = LowGoalBox.Text;
             var HumanHigh = HighGoalBox.Text;
 
-            var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", TeamNumber, TeamName, AutoForward, AutoLow, AutoHigh,HumanPass, HumanCatch, HumanPickUp, HumanMiddle,HumanLow,HumanHigh);
+            var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", TeamNumber, TeamName, AutoForward, AutoLow, AutoHigh, HumanPass, HumanCatch, HumanPickUp, HumanMiddle, HumanLow, HumanHigh);
             csv.AppendLine(newLine);
 
             //after your loop
@@ -142,11 +152,6 @@ namespace ASSIGNMENT2
             {
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
             }
-        }
-
-        private void ImportButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
