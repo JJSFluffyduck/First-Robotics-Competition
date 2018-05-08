@@ -71,33 +71,48 @@ namespace ASSIGNMENT2
             this.MatchThrowOverBox.SelectedIndex = 0;
             this.MatchLowGoalBox.SelectedIndex = 0;
             this.MatchHighGoalBox.SelectedIndex = 0;
-            RobotGroupBox.Visible = false;
-            MatchPerformanceGroupBox.Visible = false;
+
+            RobotGroupBox.Visible = true;
 
         }
 
         private void RobotPerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            AutonomousDetailsGroupBox.Visible = false;
-            HumanControlGroupBox.Visible = false;
-            RobotGroupBox.Visible = true;
-            MatchPerformanceGroupBox.Visible = false;
+            UpdateDisplay();
         }
 
         private void ScoutsDetailsRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            AutonomousDetailsGroupBox.Visible = true;
-            HumanControlGroupBox.Visible = true;
-            RobotGroupBox.Visible = false;
-            MatchPerformanceGroupBox.Visible = false;
+            UpdateDisplay();
         }
 
         private void MatchPerformanceRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            UpdateDisplay();
+        }
+
+        private void UpdateDisplay() {
+            System.Diagnostics.Debug.WriteLine("test");
+            System.Diagnostics.Debug.WriteLine(RobotPerRadioButton.Checked);
+
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
-            RobotGroupBox.Visible = false;
-            MatchPerformanceGroupBox.Visible = true;
+            RobotGroupBox.Visible = true;
+            MatchPerformanceGroupBox.Visible = false;
+
+            if (RobotPerRadioButton.Checked)
+            {
+                RobotGroupBox.Visible = true;
+            }
+            else if (ScoutsDetailsRadioButton.Checked)
+            {
+                AutonomousDetailsGroupBox.Visible = true;
+                HumanControlGroupBox.Visible = true;
+            }
+            else if (MatchPerformanceRadioButton.Checked)
+            {
+                MatchPerformanceGroupBox.Visible = true;
+            }
         }
 
         private void AddPictureButton_Click(object sender, EventArgs e)
