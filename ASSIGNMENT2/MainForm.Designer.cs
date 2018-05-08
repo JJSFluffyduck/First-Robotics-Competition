@@ -53,6 +53,7 @@
             this.TeamNumberBox = new System.Windows.Forms.TextBox();
             this.TeamNumberLabel = new System.Windows.Forms.Label();
             this.TeamDetailsGroupBox = new System.Windows.Forms.GroupBox();
+            this.RobotCopyPictureBox = new System.Windows.Forms.PictureBox();
             this.RobotGroupBox = new System.Windows.Forms.GroupBox();
             this.AddPictureButton = new System.Windows.Forms.Button();
             this.RobotPictureBox = new System.Windows.Forms.PictureBox();
@@ -95,17 +96,16 @@
             this.ScoutsDetailsButton = new System.Windows.Forms.Button();
             this.RobotPerformanceButton = new System.Windows.Forms.Button();
             this.MenuGroupBox = new System.Windows.Forms.GroupBox();
-            this.MenuLabel = new System.Windows.Forms.Label();
             this.FirstLabel = new System.Windows.Forms.Label();
-            this.RobotCopyPictureBox = new System.Windows.Forms.PictureBox();
+            this.MenuLabel = new System.Windows.Forms.Label();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RobotCopyPictureBox)).BeginInit();
             this.RobotGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RobotPictureBox)).BeginInit();
             this.MatchPerformanceGroupBox.SuspendLayout();
             this.MenuGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RobotCopyPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // HighGoalBox
@@ -478,6 +478,14 @@
             this.TeamDetailsGroupBox.TabIndex = 3;
             this.TeamDetailsGroupBox.TabStop = false;
             this.TeamDetailsGroupBox.Text = "Team Details";
+            // 
+            // RobotCopyPictureBox
+            // 
+            this.RobotCopyPictureBox.Location = new System.Drawing.Point(297, 10);
+            this.RobotCopyPictureBox.Name = "RobotCopyPictureBox";
+            this.RobotCopyPictureBox.Size = new System.Drawing.Size(95, 69);
+            this.RobotCopyPictureBox.TabIndex = 15;
+            this.RobotCopyPictureBox.TabStop = false;
             // 
             // RobotGroupBox
             // 
@@ -1065,6 +1073,8 @@
             // 
             // MenuGroupBox
             // 
+            this.MenuGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuGroupBox.Controls.Add(this.FirstLabel);
             this.MenuGroupBox.Controls.Add(this.MenuLabel);
             this.MenuGroupBox.Location = new System.Drawing.Point(197, 12);
@@ -1074,8 +1084,23 @@
             this.MenuGroupBox.TabStop = false;
             this.MenuGroupBox.Text = "Welcome";
             // 
+            // FirstLabel
+            // 
+            this.FirstLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstLabel.AutoSize = true;
+            this.FirstLabel.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.FirstLabel.Location = new System.Drawing.Point(34, 249);
+            this.FirstLabel.Name = "FirstLabel";
+            this.FirstLabel.Size = new System.Drawing.Size(401, 33);
+            this.FirstLabel.TabIndex = 22;
+            this.FirstLabel.Text = "It\'s a great pleasure to have you here with us.";
+            // 
             // MenuLabel
             // 
+            this.MenuLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuLabel.AutoSize = true;
             this.MenuLabel.Font = new System.Drawing.Font("Edwardian Script ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -1086,30 +1111,12 @@
             this.MenuLabel.Text = "Aerial Assist Scouting";
             this.MenuLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // FirstLabel
-            // 
-            this.FirstLabel.AutoSize = true;
-            this.FirstLabel.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.FirstLabel.Location = new System.Drawing.Point(34, 249);
-            this.FirstLabel.Name = "FirstLabel";
-            this.FirstLabel.Size = new System.Drawing.Size(401, 33);
-            this.FirstLabel.TabIndex = 22;
-            this.FirstLabel.Text = "It\'s a great pleasure to have you here with us.";
-            // 
-            // RobotCopyPictureBox
-            // 
-            this.RobotCopyPictureBox.Location = new System.Drawing.Point(297, 10);
-            this.RobotCopyPictureBox.Name = "RobotCopyPictureBox";
-            this.RobotCopyPictureBox.Size = new System.Drawing.Size(95, 69);
-            this.RobotCopyPictureBox.TabIndex = 15;
-            this.RobotCopyPictureBox.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 411);
+            this.Controls.Add(this.MenuGroupBox);
             this.Controls.Add(this.RobotPerformanceButton);
             this.Controls.Add(this.ScoutsDetailsButton);
             this.Controls.Add(this.TeamDetailsGroupBox);
@@ -1121,7 +1128,6 @@
             this.Controls.Add(this.MatchPerformanceGroupBox);
             this.Controls.Add(this.HumanControlGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
-            this.Controls.Add(this.MenuGroupBox);
             this.MinimumSize = new System.Drawing.Size(313, 381);
             this.Name = "MainForm";
             this.Text = "Aerial Assist Scouting";
@@ -1130,13 +1136,13 @@
             this.AutonomousDetailsGroupBox.ResumeLayout(false);
             this.TeamDetailsGroupBox.ResumeLayout(false);
             this.TeamDetailsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RobotCopyPictureBox)).EndInit();
             this.RobotGroupBox.ResumeLayout(false);
             this.RobotGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RobotPictureBox)).EndInit();
             this.MatchPerformanceGroupBox.ResumeLayout(false);
             this.MenuGroupBox.ResumeLayout(false);
             this.MenuGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RobotCopyPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
