@@ -73,31 +73,9 @@ namespace ASSIGNMENT2
             this.MatchHighGoalBox.SelectedIndex = 0;
             RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = false;
-
-        }
-
-        private void RobotPerRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
-            RobotGroupBox.Visible = true;
-            MatchPerformanceGroupBox.Visible = false;
-        }
 
-        private void ScoutsDetailsRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            AutonomousDetailsGroupBox.Visible = true;
-            HumanControlGroupBox.Visible = true;
-            RobotGroupBox.Visible = false;
-            MatchPerformanceGroupBox.Visible = false;
-        }
-
-        private void MatchPerformanceRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            AutonomousDetailsGroupBox.Visible = false;
-            HumanControlGroupBox.Visible = false;
-            RobotGroupBox.Visible = false;
-            MatchPerformanceGroupBox.Visible = true;
         }
 
         private void AddPictureButton_Click(object sender, EventArgs e)
@@ -122,7 +100,7 @@ namespace ASSIGNMENT2
 
         private void ExportMenuButton_Click(object sender, EventArgs e)
         {
-            //before your loop
+            /*//before your loop
             var csv = new StringBuilder();
 
             //in your loop
@@ -151,7 +129,31 @@ namespace ASSIGNMENT2
             else
             {
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
-            }
+            }*/
+        }
+
+        private void RobotPerformanceButton_Click(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = true;
+            MatchPerformanceGroupBox.Visible = false;
+        }
+
+        private void ScoutsDetailsButton_Click(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = true;
+            HumanControlGroupBox.Visible = true;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
+        }
+
+        private void MatchPerformanceButton_Click(object sender, EventArgs e)
+        {
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = true;
         }
     }
 }
