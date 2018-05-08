@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,6 +108,45 @@ namespace ASSIGNMENT2
                 string image = openFileDialog.FileName;
                 RobotPictureBox.Image = Image.FromFile(@image);
             }
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            //before your loop
+            var csv = new StringBuilder();
+
+            //in your loop
+            var TeamNumber = TeamNumberBox.Text;
+            var TeamName = TeamNameBox.Text;
+
+            var AutoForward = AutoForwardBox.Text;
+            var AutoLow = AutoLowGoalBox.Text;
+            var AutoHigh = AutoHighGoalBox.Text;
+
+            var HumanPass = PassBallBox.Text;
+            var HumanCatch = CatchBallBox.Text;
+            var HumanPickUp = PickUpBallBox.Text;
+            var HumanMiddle = MiddleBarBox.Text;
+            var HumanLow = LowGoalBox.Text;
+            var HumanHigh = HighGoalBox.Text;
+
+            var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", TeamNumber, TeamName, AutoForward, AutoLow, AutoHigh,HumanPass, HumanCatch, HumanPickUp, HumanMiddle,HumanLow,HumanHigh);
+            csv.AppendLine(newLine);
+
+            //after your loop
+            if (RobotPerRadioButton.Checked)
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "PreGame" + ".csv", csv.ToString());
+            }
+            else
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
+            }
+        }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
