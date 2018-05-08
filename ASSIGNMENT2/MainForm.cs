@@ -13,14 +13,14 @@ namespace ASSIGNMENT2
 {
     public partial class MainForm : Form
     {
-        
+
         public MainForm()
         {
             InitializeComponent();
         }
 
         //All ComboBox use this funtion
-        private  void ComboBox_SelectedValueChanged(object sender, EventArgs e)
+        private void ComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             var cb = ((ComboBox)sender);
             cb.BackColor = Color.White;
@@ -97,7 +97,7 @@ namespace ASSIGNMENT2
 
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
-            RobotGroupBox.Visible = true;
+            RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = false;
 
             if (RobotPerRadioButton.Checked)
@@ -166,6 +166,77 @@ namespace ASSIGNMENT2
             else
             {
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
+            }
+        }
+
+        private void ImportMenuButton_Click(object sender, EventArgs e)
+        {
+    }
+
+        private void ImportMenuButton_Click_1(object sender, EventArgs e)
+        {
+
+            OpenFileDialog fdlg = new OpenFileDialog();
+            fdlg.Title = "Roborts File Explorer";
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.Filter = "All files (*.*)|*.*|All files (*.*)|*.*";
+            fdlg.FilterIndex = 2;
+            fdlg.RestoreDirectory = true;
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                Console.WriteLine(fdlg.FileName);
+                using (var reader = new StreamReader(fdlg.FileName))
+                {
+                    List<string> TeamNumber = new List<string>();
+                    List<string> TeamName = new List<string>();
+
+                    List<string> AutoForward = new List<string>();
+                    List<string> AutoLow = new List<string>();
+                    List<string> AutoHigh = new List<string>();
+
+                    List<string> HumanPass = new List<string>();
+                    List<string> HumanCatch = new List<string>();
+                    List<string> HumanPickUp = new List<string>();
+                    List<string> HumanMiddle = new List<string>();
+                    List<string> HumanLow = new List<string>();
+                    List<string> HumanHigh = new List<string>();
+
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Split(',');
+
+                        TeamNumber.Add(values[0]);
+                        TeamName.Add(values[1]);
+
+                        AutoForward.Add(values[2]);
+                        AutoLow.Add(values[3]);
+                        AutoHigh.Add(values[4]);
+
+                        HumanPass.Add(values[5]);
+                        HumanCatch.Add(values[6]);
+                        HumanPickUp.Add(values[7]);
+                        HumanMiddle.Add(values[8]);
+                        HumanLow.Add(values[9]);
+                        HumanHigh.Add(values[10]);
+                    }
+                    TeamNumberBox.Text = TeamNumber[0];
+                    TeamNameBox.Text = TeamName[0];
+
+                    AutoForwardBox.Text = AutoForward[0];
+                    AutoLowGoalBox.Text = AutoLow[0];
+                    AutoHighGoalBox.Text = AutoHigh[0];
+
+                    PassBallBox.Text = HumanPass[0];
+                    CatchBallBox.Text = HumanCatch[0];
+                    PickUpBallBox.Text = HumanPickUp[0];
+                    MiddleBarBox.Text = HumanMiddle[0];
+                    LowGoalBox.Text = HumanLow[0];
+                    HighGoalBox.Text = HumanHigh[0];
+
+
+                }
+
             }
         }
     }

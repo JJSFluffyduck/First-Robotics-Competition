@@ -305,7 +305,6 @@
             this.HumanControlGroupBox.TabIndex = 5;
             this.HumanControlGroupBox.TabStop = false;
             this.HumanControlGroupBox.Text = "Human Control Details";
-            this.HumanControlGroupBox.Visible = false;
             // 
             // AutoHighGoalBox
             // 
@@ -395,7 +394,6 @@
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoHighGoalLabel);
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoLowGoalBox);
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoLowGoalLabel);
-            this.AutonomousDetailsGroupBox.Controls.Add(this.MatchPerformanceGroupBox);
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoForwardBox);
             this.AutonomousDetailsGroupBox.Controls.Add(this.AutoForwardLabel);
             this.AutonomousDetailsGroupBox.Location = new System.Drawing.Point(503, 210);
@@ -406,7 +404,6 @@
             this.AutonomousDetailsGroupBox.TabIndex = 4;
             this.AutonomousDetailsGroupBox.TabStop = false;
             this.AutonomousDetailsGroupBox.Text = "Autonomous Details";
-            this.AutonomousDetailsGroupBox.Visible = false;
             // 
             // AutoForwardLabel
             // 
@@ -491,7 +488,7 @@
             this.RobotGroupBox.Controls.Add(this.ManeuverabilityLabel);
             this.RobotGroupBox.Controls.Add(this.OverallDefenseBox);
             this.RobotGroupBox.Controls.Add(this.OverallDefenseLabel);
-            this.RobotGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.RobotGroupBox.Location = new System.Drawing.Point(503, 210);
             this.RobotGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.RobotGroupBox.Name = "RobotGroupBox";
             this.RobotGroupBox.Padding = new System.Windows.Forms.Padding(4);
@@ -707,7 +704,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchHighGoalBox);
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchLowGoalBox);
-            this.MatchPerformanceGroupBox.Controls.Add(this.RobotGroupBox);
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchThrowOverBox);
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchLowGoalLabel);
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchHighGoalLabel);
@@ -724,7 +720,7 @@
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchLowGoalAutoLabel);
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchDriveForwardBox);
             this.MatchPerformanceGroupBox.Controls.Add(this.MatchDriveForwardLabel);
-            this.MatchPerformanceGroupBox.Location = new System.Drawing.Point(0, 3);
+            this.MatchPerformanceGroupBox.Location = new System.Drawing.Point(503, 210);
             this.MatchPerformanceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.MatchPerformanceGroupBox.Name = "MatchPerformanceGroupBox";
             this.MatchPerformanceGroupBox.Padding = new System.Windows.Forms.Padding(4);
@@ -732,7 +728,6 @@
             this.MatchPerformanceGroupBox.TabIndex = 8;
             this.MatchPerformanceGroupBox.TabStop = false;
             this.MatchPerformanceGroupBox.Text = "Match Performance";
-            this.MatchPerformanceGroupBox.Visible = false;
             // 
             // MatchHighGoalBox
             // 
@@ -1054,6 +1049,7 @@
             this.ImportMenuButton.TabIndex = 11;
             this.ImportMenuButton.Text = "Import";
             this.ImportMenuButton.UseVisualStyleBackColor = true;
+            this.ImportMenuButton.Click += new System.EventHandler(this.ImportMenuButton_Click_1);
             // 
             // MainForm
             // 
@@ -1062,7 +1058,9 @@
             this.ClientSize = new System.Drawing.Size(1349, 912);
             this.Controls.Add(this.ImportMenuButton);
             this.Controls.Add(this.ExportMenuButton);
+            this.Controls.Add(this.RobotGroupBox);
             this.Controls.Add(this.MatchPerformanceRadioButton);
+            this.Controls.Add(this.MatchPerformanceGroupBox);
             this.Controls.Add(this.ScoutsDetailsRadioButton);
             this.Controls.Add(this.RobotPerRadioButton);
             this.Controls.Add(this.HumanControlGroupBox);
