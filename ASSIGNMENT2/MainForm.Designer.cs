@@ -110,6 +110,7 @@
             this.Score = new System.Windows.Forms.TextBox();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.AutoDrivingForwardButton = new System.Windows.Forms.Button();
+            this.ScorePointsLabel = new System.Windows.Forms.Label();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
@@ -1127,6 +1128,7 @@
             // 
             // ScorePointsGroupBox
             // 
+            this.ScorePointsGroupBox.Controls.Add(this.ScorePointsLabel);
             this.ScorePointsGroupBox.Controls.Add(this.SecondPassButton);
             this.ScorePointsGroupBox.Controls.Add(this.FirstPassButton);
             this.ScorePointsGroupBox.Controls.Add(this.CatchingButton);
@@ -1227,7 +1229,7 @@
             // 
             // Score
             // 
-            this.Score.Location = new System.Drawing.Point(318, 245);
+            this.Score.Location = new System.Drawing.Point(272, 245);
             this.Score.Name = "Score";
             this.Score.Size = new System.Drawing.Size(100, 20);
             this.Score.TabIndex = 2;
@@ -1237,11 +1239,11 @@
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
-            this.ScoreLabel.Location = new System.Drawing.Point(195, 248);
+            this.ScoreLabel.Location = new System.Drawing.Point(132, 251);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(105, 13);
+            this.ScoreLabel.Size = new System.Drawing.Size(134, 13);
             this.ScoreLabel.TabIndex = 1;
-            this.ScoreLabel.Text = "The overall score is: ";
+            this.ScoreLabel.Text = "You get an overall score of";
             // 
             // AutoDrivingForwardButton
             // 
@@ -1252,6 +1254,15 @@
             this.AutoDrivingForwardButton.Text = "Auto Driving Forward";
             this.AutoDrivingForwardButton.UseVisualStyleBackColor = true;
             this.AutoDrivingForwardButton.Click += new System.EventHandler(this.AutoDrivingForwardButton_Click);
+            // 
+            // ScorePointsLabel
+            // 
+            this.ScorePointsLabel.AutoSize = true;
+            this.ScorePointsLabel.Location = new System.Drawing.Point(379, 250);
+            this.ScorePointsLabel.Name = "ScorePointsLabel";
+            this.ScorePointsLabel.Size = new System.Drawing.Size(38, 13);
+            this.ScorePointsLabel.TabIndex = 11;
+            this.ScorePointsLabel.Text = "points.";
             // 
             // MainForm
             // 
@@ -1376,5 +1387,6 @@
         private System.Windows.Forms.TextBox Score;
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.Button AutoDrivingForwardButton;
+        private System.Windows.Forms.Label ScorePointsLabel;
     }
 }
