@@ -76,6 +76,7 @@ namespace ASSIGNMENT2
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
             TeamDetailsGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = false;
             MenuGroupBox.Visible = true;
         }
 
@@ -142,6 +143,7 @@ namespace ASSIGNMENT2
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = true;
             MatchPerformanceGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = false;
         }
 
         private void ScoutsDetailsButton_Click(object sender, EventArgs e)
@@ -152,6 +154,7 @@ namespace ASSIGNMENT2
             HumanControlGroupBox.Visible = true;
             RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = false;
         }
 
         private void MatchPerformanceButton_Click(object sender, EventArgs e)
@@ -162,6 +165,18 @@ namespace ASSIGNMENT2
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = true;
+            ScorePointsGroupBox.Visible = false;
+        }
+
+        private void PointButton_Click(object sender, EventArgs e)
+        {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = true;
         }
     }
 }

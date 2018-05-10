@@ -98,6 +98,18 @@
             this.MenuGroupBox = new System.Windows.Forms.GroupBox();
             this.FirstLabel = new System.Windows.Forms.Label();
             this.MenuLabel = new System.Windows.Forms.Label();
+            this.ScorePointsGroupBox = new System.Windows.Forms.GroupBox();
+            this.SecondPassButton = new System.Windows.Forms.Button();
+            this.FirstPassButton = new System.Windows.Forms.Button();
+            this.CatchingButton = new System.Windows.Forms.Button();
+            this.OverMiddleBarButton = new System.Windows.Forms.Button();
+            this.LowGoalButton = new System.Windows.Forms.Button();
+            this.HighGoalButton = new System.Windows.Forms.Button();
+            this.AutoHighGoalButton = new System.Windows.Forms.Button();
+            this.AutoLowGoalButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ScoreLabel = new System.Windows.Forms.Label();
+            this.AutoDrivingForwardButton = new System.Windows.Forms.Button();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.TeamDetailsGroupBox.SuspendLayout();
@@ -106,6 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RobotPictureBox)).BeginInit();
             this.MatchPerformanceGroupBox.SuspendLayout();
             this.MenuGroupBox.SuspendLayout();
+            this.ScorePointsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // HighGoalBox
@@ -1035,8 +1048,9 @@
             this.PointButton.Name = "PointButton";
             this.PointButton.Size = new System.Drawing.Size(168, 62);
             this.PointButton.TabIndex = 12;
-            this.PointButton.Text = "Point";
+            this.PointButton.Text = "Score Points";
             this.PointButton.UseVisualStyleBackColor = true;
+            this.PointButton.Click += new System.EventHandler(this.PointButton_Click);
             // 
             // MatchPerformanceButton
             // 
@@ -1111,23 +1125,141 @@
             this.MenuLabel.Text = "Aerial Assist Scouting";
             this.MenuLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // ScorePointsGroupBox
+            // 
+            this.ScorePointsGroupBox.Controls.Add(this.SecondPassButton);
+            this.ScorePointsGroupBox.Controls.Add(this.FirstPassButton);
+            this.ScorePointsGroupBox.Controls.Add(this.CatchingButton);
+            this.ScorePointsGroupBox.Controls.Add(this.OverMiddleBarButton);
+            this.ScorePointsGroupBox.Controls.Add(this.LowGoalButton);
+            this.ScorePointsGroupBox.Controls.Add(this.HighGoalButton);
+            this.ScorePointsGroupBox.Controls.Add(this.AutoHighGoalButton);
+            this.ScorePointsGroupBox.Controls.Add(this.AutoLowGoalButton);
+            this.ScorePointsGroupBox.Controls.Add(this.textBox1);
+            this.ScorePointsGroupBox.Controls.Add(this.ScoreLabel);
+            this.ScorePointsGroupBox.Controls.Add(this.AutoDrivingForwardButton);
+            this.ScorePointsGroupBox.Location = new System.Drawing.Point(197, 108);
+            this.ScorePointsGroupBox.Name = "ScorePointsGroupBox";
+            this.ScorePointsGroupBox.Size = new System.Drawing.Size(461, 288);
+            this.ScorePointsGroupBox.TabIndex = 17;
+            this.ScorePointsGroupBox.TabStop = false;
+            this.ScorePointsGroupBox.Text = "Score points";
+            // 
+            // SecondPassButton
+            // 
+            this.SecondPassButton.Location = new System.Drawing.Point(311, 180);
+            this.SecondPassButton.Name = "SecondPassButton";
+            this.SecondPassButton.Size = new System.Drawing.Size(107, 43);
+            this.SecondPassButton.TabIndex = 10;
+            this.SecondPassButton.Text = "Second Pass";
+            this.SecondPassButton.UseVisualStyleBackColor = true;
+            // 
+            // FirstPassButton
+            // 
+            this.FirstPassButton.Location = new System.Drawing.Point(182, 181);
+            this.FirstPassButton.Name = "FirstPassButton";
+            this.FirstPassButton.Size = new System.Drawing.Size(107, 43);
+            this.FirstPassButton.TabIndex = 9;
+            this.FirstPassButton.Text = "First Pass";
+            this.FirstPassButton.UseVisualStyleBackColor = true;
+            // 
+            // CatchingButton
+            // 
+            this.CatchingButton.Location = new System.Drawing.Point(49, 180);
+            this.CatchingButton.Name = "CatchingButton";
+            this.CatchingButton.Size = new System.Drawing.Size(107, 43);
+            this.CatchingButton.TabIndex = 8;
+            this.CatchingButton.Text = "Catching";
+            this.CatchingButton.UseVisualStyleBackColor = true;
+            // 
+            // OverMiddleBarButton
+            // 
+            this.OverMiddleBarButton.Location = new System.Drawing.Point(311, 116);
+            this.OverMiddleBarButton.Name = "OverMiddleBarButton";
+            this.OverMiddleBarButton.Size = new System.Drawing.Size(107, 43);
+            this.OverMiddleBarButton.TabIndex = 7;
+            this.OverMiddleBarButton.Text = "Over Middle Bar";
+            this.OverMiddleBarButton.UseVisualStyleBackColor = true;
+            // 
+            // LowGoalButton
+            // 
+            this.LowGoalButton.Location = new System.Drawing.Point(49, 116);
+            this.LowGoalButton.Name = "LowGoalButton";
+            this.LowGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.LowGoalButton.TabIndex = 6;
+            this.LowGoalButton.Text = "Low Goal";
+            this.LowGoalButton.UseVisualStyleBackColor = true;
+            // 
+            // HighGoalButton
+            // 
+            this.HighGoalButton.Location = new System.Drawing.Point(181, 116);
+            this.HighGoalButton.Name = "HighGoalButton";
+            this.HighGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.HighGoalButton.TabIndex = 5;
+            this.HighGoalButton.Text = "High Goal";
+            this.HighGoalButton.UseVisualStyleBackColor = true;
+            // 
+            // AutoHighGoalButton
+            // 
+            this.AutoHighGoalButton.Location = new System.Drawing.Point(311, 48);
+            this.AutoHighGoalButton.Name = "AutoHighGoalButton";
+            this.AutoHighGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.AutoHighGoalButton.TabIndex = 4;
+            this.AutoHighGoalButton.Text = "Auto High Goal";
+            this.AutoHighGoalButton.UseVisualStyleBackColor = true;
+            // 
+            // AutoLowGoalButton
+            // 
+            this.AutoLowGoalButton.Location = new System.Drawing.Point(181, 48);
+            this.AutoLowGoalButton.Name = "AutoLowGoalButton";
+            this.AutoLowGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.AutoLowGoalButton.TabIndex = 3;
+            this.AutoLowGoalButton.Text = "Auto Low Goal";
+            this.AutoLowGoalButton.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(318, 245);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Location = new System.Drawing.Point(236, 248);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(76, 13);
+            this.ScoreLabel.TabIndex = 1;
+            this.ScoreLabel.Text = "Your Score is: ";
+            // 
+            // AutoDrivingForwardButton
+            // 
+            this.AutoDrivingForwardButton.Location = new System.Drawing.Point(49, 48);
+            this.AutoDrivingForwardButton.Name = "AutoDrivingForwardButton";
+            this.AutoDrivingForwardButton.Size = new System.Drawing.Size(107, 43);
+            this.AutoDrivingForwardButton.TabIndex = 0;
+            this.AutoDrivingForwardButton.Text = "Auto Driving Forward";
+            this.AutoDrivingForwardButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 411);
-            this.Controls.Add(this.MenuGroupBox);
+            this.Controls.Add(this.ScorePointsGroupBox);
             this.Controls.Add(this.RobotPerformanceButton);
             this.Controls.Add(this.ScoutsDetailsButton);
-            this.Controls.Add(this.TeamDetailsGroupBox);
             this.Controls.Add(this.MatchPerformanceButton);
             this.Controls.Add(this.PointButton);
             this.Controls.Add(this.ImportMenuButton);
             this.Controls.Add(this.ExportMenuButton);
             this.Controls.Add(this.RobotGroupBox);
             this.Controls.Add(this.MatchPerformanceGroupBox);
-            this.Controls.Add(this.HumanControlGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
+            this.Controls.Add(this.HumanControlGroupBox);
+            this.Controls.Add(this.TeamDetailsGroupBox);
+            this.Controls.Add(this.MenuGroupBox);
             this.MinimumSize = new System.Drawing.Size(313, 381);
             this.Name = "MainForm";
             this.Text = "Aerial Assist Scouting";
@@ -1143,6 +1275,8 @@
             this.MatchPerformanceGroupBox.ResumeLayout(false);
             this.MenuGroupBox.ResumeLayout(false);
             this.MenuGroupBox.PerformLayout();
+            this.ScorePointsGroupBox.ResumeLayout(false);
+            this.ScorePointsGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1219,5 +1353,17 @@
         private System.Windows.Forms.Label FirstLabel;
         private System.Windows.Forms.Label MenuLabel;
         private System.Windows.Forms.PictureBox RobotCopyPictureBox;
+        private System.Windows.Forms.GroupBox ScorePointsGroupBox;
+        private System.Windows.Forms.Button SecondPassButton;
+        private System.Windows.Forms.Button FirstPassButton;
+        private System.Windows.Forms.Button CatchingButton;
+        private System.Windows.Forms.Button OverMiddleBarButton;
+        private System.Windows.Forms.Button LowGoalButton;
+        private System.Windows.Forms.Button HighGoalButton;
+        private System.Windows.Forms.Button AutoHighGoalButton;
+        private System.Windows.Forms.Button AutoLowGoalButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.Button AutoDrivingForwardButton;
     }
 }
