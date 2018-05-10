@@ -107,7 +107,7 @@
             this.HighGoalButton = new System.Windows.Forms.Button();
             this.AutoHighGoalButton = new System.Windows.Forms.Button();
             this.AutoLowGoalButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Score = new System.Windows.Forms.TextBox();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.AutoDrivingForwardButton = new System.Windows.Forms.Button();
             this.HumanControlGroupBox.SuspendLayout();
@@ -1135,7 +1135,7 @@
             this.ScorePointsGroupBox.Controls.Add(this.HighGoalButton);
             this.ScorePointsGroupBox.Controls.Add(this.AutoHighGoalButton);
             this.ScorePointsGroupBox.Controls.Add(this.AutoLowGoalButton);
-            this.ScorePointsGroupBox.Controls.Add(this.textBox1);
+            this.ScorePointsGroupBox.Controls.Add(this.Score);
             this.ScorePointsGroupBox.Controls.Add(this.ScoreLabel);
             this.ScorePointsGroupBox.Controls.Add(this.AutoDrivingForwardButton);
             this.ScorePointsGroupBox.Location = new System.Drawing.Point(197, 108);
@@ -1153,6 +1153,7 @@
             this.SecondPassButton.TabIndex = 10;
             this.SecondPassButton.Text = "Second Pass";
             this.SecondPassButton.UseVisualStyleBackColor = true;
+            this.SecondPassButton.Click += new System.EventHandler(this.SecondPassButton_Click);
             // 
             // FirstPassButton
             // 
@@ -1162,6 +1163,7 @@
             this.FirstPassButton.TabIndex = 9;
             this.FirstPassButton.Text = "First Pass";
             this.FirstPassButton.UseVisualStyleBackColor = true;
+            this.FirstPassButton.Click += new System.EventHandler(this.FirstPassButton_Click);
             // 
             // CatchingButton
             // 
@@ -1171,6 +1173,7 @@
             this.CatchingButton.TabIndex = 8;
             this.CatchingButton.Text = "Catching";
             this.CatchingButton.UseVisualStyleBackColor = true;
+            this.CatchingButton.Click += new System.EventHandler(this.CatchingButton_Click);
             // 
             // OverMiddleBarButton
             // 
@@ -1180,6 +1183,7 @@
             this.OverMiddleBarButton.TabIndex = 7;
             this.OverMiddleBarButton.Text = "Over Middle Bar";
             this.OverMiddleBarButton.UseVisualStyleBackColor = true;
+            this.OverMiddleBarButton.Click += new System.EventHandler(this.OverMiddleBarButton_Click);
             // 
             // LowGoalButton
             // 
@@ -1189,6 +1193,7 @@
             this.LowGoalButton.TabIndex = 6;
             this.LowGoalButton.Text = "Low Goal";
             this.LowGoalButton.UseVisualStyleBackColor = true;
+            this.LowGoalButton.Click += new System.EventHandler(this.LowGoalButton_Click);
             // 
             // HighGoalButton
             // 
@@ -1198,6 +1203,7 @@
             this.HighGoalButton.TabIndex = 5;
             this.HighGoalButton.Text = "High Goal";
             this.HighGoalButton.UseVisualStyleBackColor = true;
+            this.HighGoalButton.Click += new System.EventHandler(this.HighGoalButton_Click);
             // 
             // AutoHighGoalButton
             // 
@@ -1207,6 +1213,7 @@
             this.AutoHighGoalButton.TabIndex = 4;
             this.AutoHighGoalButton.Text = "Auto High Goal";
             this.AutoHighGoalButton.UseVisualStyleBackColor = true;
+            this.AutoHighGoalButton.Click += new System.EventHandler(this.AutoHighGoalButton_Click);
             // 
             // AutoLowGoalButton
             // 
@@ -1216,22 +1223,25 @@
             this.AutoLowGoalButton.TabIndex = 3;
             this.AutoLowGoalButton.Text = "Auto Low Goal";
             this.AutoLowGoalButton.UseVisualStyleBackColor = true;
+            this.AutoLowGoalButton.Click += new System.EventHandler(this.AutoLowGoalButton_Click);
             // 
-            // textBox1
+            // Score
             // 
-            this.textBox1.Location = new System.Drawing.Point(318, 245);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.Score.Location = new System.Drawing.Point(318, 245);
+            this.Score.Name = "Score";
+            this.Score.Size = new System.Drawing.Size(100, 20);
+            this.Score.TabIndex = 2;
+            this.Score.Text = "0";
+            this.Score.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
-            this.ScoreLabel.Location = new System.Drawing.Point(236, 248);
+            this.ScoreLabel.Location = new System.Drawing.Point(195, 248);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(76, 13);
+            this.ScoreLabel.Size = new System.Drawing.Size(105, 13);
             this.ScoreLabel.TabIndex = 1;
-            this.ScoreLabel.Text = "Your Score is: ";
+            this.ScoreLabel.Text = "The overall score is: ";
             // 
             // AutoDrivingForwardButton
             // 
@@ -1241,6 +1251,7 @@
             this.AutoDrivingForwardButton.TabIndex = 0;
             this.AutoDrivingForwardButton.Text = "Auto Driving Forward";
             this.AutoDrivingForwardButton.UseVisualStyleBackColor = true;
+            this.AutoDrivingForwardButton.Click += new System.EventHandler(this.AutoDrivingForwardButton_Click);
             // 
             // MainForm
             // 
@@ -1362,7 +1373,7 @@
         private System.Windows.Forms.Button HighGoalButton;
         private System.Windows.Forms.Button AutoHighGoalButton;
         private System.Windows.Forms.Button AutoLowGoalButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Score;
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.Button AutoDrivingForwardButton;
     }

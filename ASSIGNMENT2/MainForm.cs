@@ -13,14 +13,13 @@ namespace ASSIGNMENT2
 {
     public partial class MainForm : Form
     {
-        
         public MainForm()
         {
             InitializeComponent();
         }
 
         //All ComboBox use this funtion
-        private  void ComboBox_SelectedValueChanged(object sender, EventArgs e)
+        private void ComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             var cb = ((ComboBox)sender);
             cb.BackColor = Color.White;
@@ -177,6 +176,51 @@ namespace ASSIGNMENT2
             RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = false;
             ScorePointsGroupBox.Visible = true;
+        }
+
+        private void CatchingButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void AutoDrivingForwardButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (5 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void AutoLowGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (6 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void AutoHighGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (15 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void LowGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (1 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void HighGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void OverMiddleBarButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void FirstPassButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void SecondPassButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (20 + Double.Parse(Score.Text)).ToString();
         }
     }
 }
