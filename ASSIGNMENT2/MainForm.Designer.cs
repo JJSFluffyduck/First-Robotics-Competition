@@ -47,23 +47,10 @@
             this.AutoLowGoalLabel = new System.Windows.Forms.Label();
             this.AutoForwardBox = new System.Windows.Forms.ComboBox();
             this.AutonomousDetailsGroupBox = new System.Windows.Forms.GroupBox();
+            this.AutoForwardLabel = new System.Windows.Forms.Label();
             this.MatchPerformanceGroupBox = new System.Windows.Forms.GroupBox();
             this.MatchHighGoalBox = new System.Windows.Forms.ComboBox();
             this.MatchLowGoalBox = new System.Windows.Forms.ComboBox();
-            this.RobotGroupBox = new System.Windows.Forms.GroupBox();
-            this.AddPictureButton = new System.Windows.Forms.Button();
-            this.RobotPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.RobotDescriptionBox = new System.Windows.Forms.TextBox();
-            this.DescriptionLabel = new System.Windows.Forms.Label();
-            this.OverallAttackBox = new System.Windows.Forms.ComboBox();
-            this.OverallAttackLabel = new System.Windows.Forms.Label();
-            this.SpeedBox = new System.Windows.Forms.ComboBox();
-            this.SpeedLabel = new System.Windows.Forms.Label();
-            this.ManeuverabilityBox = new System.Windows.Forms.ComboBox();
-            this.ManeuverabilityLabel = new System.Windows.Forms.Label();
-            this.OverallDefenseBox = new System.Windows.Forms.ComboBox();
-            this.OverallDefenseLabel = new System.Windows.Forms.Label();
             this.MatchThrowOverBox = new System.Windows.Forms.ComboBox();
             this.MatchLowGoalLabel = new System.Windows.Forms.Label();
             this.MatchHighGoalLabel = new System.Windows.Forms.Label();
@@ -80,7 +67,20 @@
             this.MatchLowGoalAutoLabel = new System.Windows.Forms.Label();
             this.MatchDriveForwardBox = new System.Windows.Forms.ComboBox();
             this.MatchDriveForwardLabel = new System.Windows.Forms.Label();
-            this.AutoForwardLabel = new System.Windows.Forms.Label();
+            this.RobotGroupBox = new System.Windows.Forms.GroupBox();
+            this.AddPictureButton = new System.Windows.Forms.Button();
+            this.RobotPictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RobotDescriptionBox = new System.Windows.Forms.TextBox();
+            this.DescriptionLabel = new System.Windows.Forms.Label();
+            this.OverallAttackBox = new System.Windows.Forms.ComboBox();
+            this.OverallAttackLabel = new System.Windows.Forms.Label();
+            this.SpeedBox = new System.Windows.Forms.ComboBox();
+            this.SpeedLabel = new System.Windows.Forms.Label();
+            this.ManeuverabilityBox = new System.Windows.Forms.ComboBox();
+            this.ManeuverabilityLabel = new System.Windows.Forms.Label();
+            this.OverallDefenseBox = new System.Windows.Forms.ComboBox();
+            this.OverallDefenseLabel = new System.Windows.Forms.Label();
             this.TeamNameBox = new System.Windows.Forms.TextBox();
             this.TeamNameLabel = new System.Windows.Forms.Label();
             this.TeamNumberBox = new System.Windows.Forms.TextBox();
@@ -96,7 +96,7 @@
             this.ScoutsDetailsButton = new System.Windows.Forms.Button();
             this.RobotPerformanceButton = new System.Windows.Forms.Button();
             this.MenuGroupBox = new System.Windows.Forms.GroupBox();
-            this.FirstLabel = new System.Windows.Forms.Label();
+            this.FirstWelcomeLabel = new System.Windows.Forms.Label();
             this.MenuLabel = new System.Windows.Forms.Label();
             this.ScorePointsGroupBox = new System.Windows.Forms.GroupBox();
             this.ScorePointsLabel = new System.Windows.Forms.Label();
@@ -432,6 +432,16 @@
             this.AutonomousDetailsGroupBox.Text = "Autonomous Details";
             this.AutonomousDetailsGroupBox.Visible = false;
             // 
+            // AutoForwardLabel
+            // 
+            this.AutoForwardLabel.Location = new System.Drawing.Point(14, 29);
+            this.AutoForwardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AutoForwardLabel.Name = "AutoForwardLabel";
+            this.AutoForwardLabel.Size = new System.Drawing.Size(88, 19);
+            this.AutoForwardLabel.TabIndex = 0;
+            this.AutoForwardLabel.Text = "Drive Forward";
+            this.AutoForwardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // MatchPerformanceGroupBox
             // 
             this.MatchPerformanceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -503,209 +513,6 @@
             this.MatchLowGoalBox.Size = new System.Drawing.Size(350, 21);
             this.MatchLowGoalBox.TabIndex = 17;
             this.MatchLowGoalBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedValueChanged);
-            // 
-            // RobotGroupBox
-            // 
-            this.RobotGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RobotGroupBox.Controls.Add(this.AddPictureButton);
-            this.RobotGroupBox.Controls.Add(this.RobotPictureBox);
-            this.RobotGroupBox.Controls.Add(this.label1);
-            this.RobotGroupBox.Controls.Add(this.RobotDescriptionBox);
-            this.RobotGroupBox.Controls.Add(this.DescriptionLabel);
-            this.RobotGroupBox.Controls.Add(this.OverallAttackBox);
-            this.RobotGroupBox.Controls.Add(this.OverallAttackLabel);
-            this.RobotGroupBox.Controls.Add(this.SpeedBox);
-            this.RobotGroupBox.Controls.Add(this.SpeedLabel);
-            this.RobotGroupBox.Controls.Add(this.ManeuverabilityBox);
-            this.RobotGroupBox.Controls.Add(this.ManeuverabilityLabel);
-            this.RobotGroupBox.Controls.Add(this.OverallDefenseBox);
-            this.RobotGroupBox.Controls.Add(this.OverallDefenseLabel);
-            this.RobotGroupBox.Location = new System.Drawing.Point(186, 167);
-            this.RobotGroupBox.Margin = new System.Windows.Forms.Padding(2);
-            this.RobotGroupBox.Name = "RobotGroupBox";
-            this.RobotGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.RobotGroupBox.Size = new System.Drawing.Size(470, 297);
-            this.RobotGroupBox.TabIndex = 8;
-            this.RobotGroupBox.TabStop = false;
-            this.RobotGroupBox.Text = "Robot\'s Performance";
-            // 
-            // AddPictureButton
-            // 
-            this.AddPictureButton.Location = new System.Drawing.Point(16, 217);
-            this.AddPictureButton.Name = "AddPictureButton";
-            this.AddPictureButton.Size = new System.Drawing.Size(84, 24);
-            this.AddPictureButton.TabIndex = 13;
-            this.AddPictureButton.Text = "Add Picture";
-            this.AddPictureButton.UseVisualStyleBackColor = true;
-            this.AddPictureButton.Click += new System.EventHandler(this.AddPictureButton_Click);
-            // 
-            // RobotPictureBox
-            // 
-            this.RobotPictureBox.Location = new System.Drawing.Point(106, 160);
-            this.RobotPictureBox.Name = "RobotPictureBox";
-            this.RobotPictureBox.Size = new System.Drawing.Size(189, 130);
-            this.RobotPictureBox.TabIndex = 12;
-            this.RobotPictureBox.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(15, 160);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Robot\'s  Picture";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // RobotDescriptionBox
-            // 
-            this.RobotDescriptionBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RobotDescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RobotDescriptionBox.Location = new System.Drawing.Point(106, 132);
-            this.RobotDescriptionBox.Margin = new System.Windows.Forms.Padding(2);
-            this.RobotDescriptionBox.Name = "RobotDescriptionBox";
-            this.RobotDescriptionBox.Size = new System.Drawing.Size(350, 20);
-            this.RobotDescriptionBox.TabIndex = 3;
-            // 
-            // DescriptionLabel
-            // 
-            this.DescriptionLabel.Location = new System.Drawing.Point(15, 130);
-            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(88, 19);
-            this.DescriptionLabel.TabIndex = 10;
-            this.DescriptionLabel.Text = "Description";
-            this.DescriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // OverallAttackBox
-            // 
-            this.OverallAttackBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OverallAttackBox.BackColor = System.Drawing.Color.White;
-            this.OverallAttackBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.OverallAttackBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverallAttackBox.ForeColor = System.Drawing.Color.Black;
-            this.OverallAttackBox.FormattingEnabled = true;
-            this.OverallAttackBox.Items.AddRange(new object[] {
-            "Unknown",
-            "Terrible",
-            "Bad",
-            "Average",
-            "Good",
-            "Excellent"});
-            this.OverallAttackBox.Location = new System.Drawing.Point(107, 105);
-            this.OverallAttackBox.Margin = new System.Windows.Forms.Padding(2);
-            this.OverallAttackBox.Name = "OverallAttackBox";
-            this.OverallAttackBox.Size = new System.Drawing.Size(349, 21);
-            this.OverallAttackBox.TabIndex = 9;
-            // 
-            // OverallAttackLabel
-            // 
-            this.OverallAttackLabel.Location = new System.Drawing.Point(15, 105);
-            this.OverallAttackLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.OverallAttackLabel.Name = "OverallAttackLabel";
-            this.OverallAttackLabel.Size = new System.Drawing.Size(88, 19);
-            this.OverallAttackLabel.TabIndex = 8;
-            this.OverallAttackLabel.Text = "Overall Attack";
-            this.OverallAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // SpeedBox
-            // 
-            this.SpeedBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SpeedBox.BackColor = System.Drawing.Color.White;
-            this.SpeedBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SpeedBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SpeedBox.ForeColor = System.Drawing.Color.Black;
-            this.SpeedBox.FormattingEnabled = true;
-            this.SpeedBox.Items.AddRange(new object[] {
-            "Unknown",
-            "Terrible",
-            "Bad",
-            "Average",
-            "Good",
-            "Excellent"});
-            this.SpeedBox.Location = new System.Drawing.Point(107, 80);
-            this.SpeedBox.Margin = new System.Windows.Forms.Padding(2);
-            this.SpeedBox.Name = "SpeedBox";
-            this.SpeedBox.Size = new System.Drawing.Size(349, 21);
-            this.SpeedBox.TabIndex = 7;
-            // 
-            // SpeedLabel
-            // 
-            this.SpeedLabel.Location = new System.Drawing.Point(14, 80);
-            this.SpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpeedLabel.Name = "SpeedLabel";
-            this.SpeedLabel.Size = new System.Drawing.Size(88, 19);
-            this.SpeedLabel.TabIndex = 6;
-            this.SpeedLabel.Text = "Speed";
-            this.SpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ManeuverabilityBox
-            // 
-            this.ManeuverabilityBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ManeuverabilityBox.BackColor = System.Drawing.Color.White;
-            this.ManeuverabilityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ManeuverabilityBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManeuverabilityBox.ForeColor = System.Drawing.Color.Black;
-            this.ManeuverabilityBox.FormattingEnabled = true;
-            this.ManeuverabilityBox.Items.AddRange(new object[] {
-            "Unknown",
-            "Terrible",
-            "Bad",
-            "Average",
-            "Good",
-            "Excellent"});
-            this.ManeuverabilityBox.Location = new System.Drawing.Point(107, 54);
-            this.ManeuverabilityBox.Margin = new System.Windows.Forms.Padding(2);
-            this.ManeuverabilityBox.Name = "ManeuverabilityBox";
-            this.ManeuverabilityBox.Size = new System.Drawing.Size(349, 21);
-            this.ManeuverabilityBox.TabIndex = 4;
-            // 
-            // ManeuverabilityLabel
-            // 
-            this.ManeuverabilityLabel.Location = new System.Drawing.Point(14, 55);
-            this.ManeuverabilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ManeuverabilityLabel.Name = "ManeuverabilityLabel";
-            this.ManeuverabilityLabel.Size = new System.Drawing.Size(88, 19);
-            this.ManeuverabilityLabel.TabIndex = 0;
-            this.ManeuverabilityLabel.Text = "Maneuverability";
-            this.ManeuverabilityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // OverallDefenseBox
-            // 
-            this.OverallDefenseBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OverallDefenseBox.BackColor = System.Drawing.Color.White;
-            this.OverallDefenseBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.OverallDefenseBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OverallDefenseBox.ForeColor = System.Drawing.Color.Black;
-            this.OverallDefenseBox.FormattingEnabled = true;
-            this.OverallDefenseBox.Items.AddRange(new object[] {
-            "Unknown",
-            "Terrible",
-            "Bad",
-            "Average",
-            "Good",
-            "Excellent"});
-            this.OverallDefenseBox.Location = new System.Drawing.Point(107, 29);
-            this.OverallDefenseBox.Margin = new System.Windows.Forms.Padding(2);
-            this.OverallDefenseBox.Name = "OverallDefenseBox";
-            this.OverallDefenseBox.Size = new System.Drawing.Size(349, 21);
-            this.OverallDefenseBox.TabIndex = 3;
-            // 
-            // OverallDefenseLabel
-            // 
-            this.OverallDefenseLabel.Location = new System.Drawing.Point(14, 29);
-            this.OverallDefenseLabel.Margin = new System.Windows.Forms.Padding(2);
-            this.OverallDefenseLabel.Name = "OverallDefenseLabel";
-            this.OverallDefenseLabel.Size = new System.Drawing.Size(88, 19);
-            this.OverallDefenseLabel.TabIndex = 0;
-            this.OverallDefenseLabel.Text = "Overall Defense";
-            this.OverallDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MatchThrowOverBox
             // 
@@ -937,15 +744,208 @@
             this.MatchDriveForwardLabel.Text = "Drive Forward";
             this.MatchDriveForwardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AutoForwardLabel
+            // RobotGroupBox
             // 
-            this.AutoForwardLabel.Location = new System.Drawing.Point(14, 29);
-            this.AutoForwardLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AutoForwardLabel.Name = "AutoForwardLabel";
-            this.AutoForwardLabel.Size = new System.Drawing.Size(88, 19);
-            this.AutoForwardLabel.TabIndex = 0;
-            this.AutoForwardLabel.Text = "Drive Forward";
-            this.AutoForwardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RobotGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RobotGroupBox.Controls.Add(this.AddPictureButton);
+            this.RobotGroupBox.Controls.Add(this.RobotPictureBox);
+            this.RobotGroupBox.Controls.Add(this.label1);
+            this.RobotGroupBox.Controls.Add(this.RobotDescriptionBox);
+            this.RobotGroupBox.Controls.Add(this.DescriptionLabel);
+            this.RobotGroupBox.Controls.Add(this.OverallAttackBox);
+            this.RobotGroupBox.Controls.Add(this.OverallAttackLabel);
+            this.RobotGroupBox.Controls.Add(this.SpeedBox);
+            this.RobotGroupBox.Controls.Add(this.SpeedLabel);
+            this.RobotGroupBox.Controls.Add(this.ManeuverabilityBox);
+            this.RobotGroupBox.Controls.Add(this.ManeuverabilityLabel);
+            this.RobotGroupBox.Controls.Add(this.OverallDefenseBox);
+            this.RobotGroupBox.Controls.Add(this.OverallDefenseLabel);
+            this.RobotGroupBox.Location = new System.Drawing.Point(186, 167);
+            this.RobotGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RobotGroupBox.Name = "RobotGroupBox";
+            this.RobotGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.RobotGroupBox.Size = new System.Drawing.Size(470, 297);
+            this.RobotGroupBox.TabIndex = 8;
+            this.RobotGroupBox.TabStop = false;
+            this.RobotGroupBox.Text = "Robot\'s Performance";
+            // 
+            // AddPictureButton
+            // 
+            this.AddPictureButton.Location = new System.Drawing.Point(16, 217);
+            this.AddPictureButton.Name = "AddPictureButton";
+            this.AddPictureButton.Size = new System.Drawing.Size(84, 24);
+            this.AddPictureButton.TabIndex = 13;
+            this.AddPictureButton.Text = "Add Picture";
+            this.AddPictureButton.UseVisualStyleBackColor = true;
+            this.AddPictureButton.Click += new System.EventHandler(this.AddPictureButton_Click);
+            // 
+            // RobotPictureBox
+            // 
+            this.RobotPictureBox.Location = new System.Drawing.Point(106, 160);
+            this.RobotPictureBox.Name = "RobotPictureBox";
+            this.RobotPictureBox.Size = new System.Drawing.Size(189, 130);
+            this.RobotPictureBox.TabIndex = 12;
+            this.RobotPictureBox.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(15, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Robot\'s  Picture";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // RobotDescriptionBox
+            // 
+            this.RobotDescriptionBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RobotDescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RobotDescriptionBox.Location = new System.Drawing.Point(106, 132);
+            this.RobotDescriptionBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RobotDescriptionBox.Name = "RobotDescriptionBox";
+            this.RobotDescriptionBox.Size = new System.Drawing.Size(350, 20);
+            this.RobotDescriptionBox.TabIndex = 3;
+            // 
+            // DescriptionLabel
+            // 
+            this.DescriptionLabel.Location = new System.Drawing.Point(15, 130);
+            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(88, 19);
+            this.DescriptionLabel.TabIndex = 10;
+            this.DescriptionLabel.Text = "Description";
+            this.DescriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // OverallAttackBox
+            // 
+            this.OverallAttackBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OverallAttackBox.BackColor = System.Drawing.Color.White;
+            this.OverallAttackBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.OverallAttackBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverallAttackBox.ForeColor = System.Drawing.Color.Black;
+            this.OverallAttackBox.FormattingEnabled = true;
+            this.OverallAttackBox.Items.AddRange(new object[] {
+            "Unknown",
+            "Terrible",
+            "Bad",
+            "Average",
+            "Good",
+            "Excellent"});
+            this.OverallAttackBox.Location = new System.Drawing.Point(107, 105);
+            this.OverallAttackBox.Margin = new System.Windows.Forms.Padding(2);
+            this.OverallAttackBox.Name = "OverallAttackBox";
+            this.OverallAttackBox.Size = new System.Drawing.Size(349, 21);
+            this.OverallAttackBox.TabIndex = 9;
+            // 
+            // OverallAttackLabel
+            // 
+            this.OverallAttackLabel.Location = new System.Drawing.Point(15, 105);
+            this.OverallAttackLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OverallAttackLabel.Name = "OverallAttackLabel";
+            this.OverallAttackLabel.Size = new System.Drawing.Size(88, 19);
+            this.OverallAttackLabel.TabIndex = 8;
+            this.OverallAttackLabel.Text = "Overall Attack";
+            this.OverallAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // SpeedBox
+            // 
+            this.SpeedBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SpeedBox.BackColor = System.Drawing.Color.White;
+            this.SpeedBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SpeedBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SpeedBox.ForeColor = System.Drawing.Color.Black;
+            this.SpeedBox.FormattingEnabled = true;
+            this.SpeedBox.Items.AddRange(new object[] {
+            "Unknown",
+            "Terrible",
+            "Bad",
+            "Average",
+            "Good",
+            "Excellent"});
+            this.SpeedBox.Location = new System.Drawing.Point(107, 80);
+            this.SpeedBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SpeedBox.Name = "SpeedBox";
+            this.SpeedBox.Size = new System.Drawing.Size(349, 21);
+            this.SpeedBox.TabIndex = 7;
+            // 
+            // SpeedLabel
+            // 
+            this.SpeedLabel.Location = new System.Drawing.Point(14, 80);
+            this.SpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpeedLabel.Name = "SpeedLabel";
+            this.SpeedLabel.Size = new System.Drawing.Size(88, 19);
+            this.SpeedLabel.TabIndex = 6;
+            this.SpeedLabel.Text = "Speed";
+            this.SpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ManeuverabilityBox
+            // 
+            this.ManeuverabilityBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ManeuverabilityBox.BackColor = System.Drawing.Color.White;
+            this.ManeuverabilityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ManeuverabilityBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManeuverabilityBox.ForeColor = System.Drawing.Color.Black;
+            this.ManeuverabilityBox.FormattingEnabled = true;
+            this.ManeuverabilityBox.Items.AddRange(new object[] {
+            "Unknown",
+            "Terrible",
+            "Bad",
+            "Average",
+            "Good",
+            "Excellent"});
+            this.ManeuverabilityBox.Location = new System.Drawing.Point(107, 54);
+            this.ManeuverabilityBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ManeuverabilityBox.Name = "ManeuverabilityBox";
+            this.ManeuverabilityBox.Size = new System.Drawing.Size(349, 21);
+            this.ManeuverabilityBox.TabIndex = 4;
+            // 
+            // ManeuverabilityLabel
+            // 
+            this.ManeuverabilityLabel.Location = new System.Drawing.Point(14, 55);
+            this.ManeuverabilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ManeuverabilityLabel.Name = "ManeuverabilityLabel";
+            this.ManeuverabilityLabel.Size = new System.Drawing.Size(88, 19);
+            this.ManeuverabilityLabel.TabIndex = 0;
+            this.ManeuverabilityLabel.Text = "Maneuverability";
+            this.ManeuverabilityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // OverallDefenseBox
+            // 
+            this.OverallDefenseBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OverallDefenseBox.BackColor = System.Drawing.Color.White;
+            this.OverallDefenseBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.OverallDefenseBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OverallDefenseBox.ForeColor = System.Drawing.Color.Black;
+            this.OverallDefenseBox.FormattingEnabled = true;
+            this.OverallDefenseBox.Items.AddRange(new object[] {
+            "Unknown",
+            "Terrible",
+            "Bad",
+            "Average",
+            "Good",
+            "Excellent"});
+            this.OverallDefenseBox.Location = new System.Drawing.Point(107, 29);
+            this.OverallDefenseBox.Margin = new System.Windows.Forms.Padding(2);
+            this.OverallDefenseBox.Name = "OverallDefenseBox";
+            this.OverallDefenseBox.Size = new System.Drawing.Size(349, 21);
+            this.OverallDefenseBox.TabIndex = 3;
+            // 
+            // OverallDefenseLabel
+            // 
+            this.OverallDefenseLabel.Location = new System.Drawing.Point(14, 29);
+            this.OverallDefenseLabel.Margin = new System.Windows.Forms.Padding(2);
+            this.OverallDefenseLabel.Name = "OverallDefenseLabel";
+            this.OverallDefenseLabel.Size = new System.Drawing.Size(88, 19);
+            this.OverallDefenseLabel.TabIndex = 0;
+            this.OverallDefenseLabel.Text = "Overall Defense";
+            this.OverallDefenseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TeamNameBox
             // 
@@ -1113,7 +1113,7 @@
             // 
             this.MenuGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MenuGroupBox.Controls.Add(this.FirstLabel);
+            this.MenuGroupBox.Controls.Add(this.FirstWelcomeLabel);
             this.MenuGroupBox.Controls.Add(this.MenuLabel);
             this.MenuGroupBox.Location = new System.Drawing.Point(181, 12);
             this.MenuGroupBox.Name = "MenuGroupBox";
@@ -1122,24 +1122,23 @@
             this.MenuGroupBox.TabStop = false;
             this.MenuGroupBox.Text = "Welcome";
             // 
-            // FirstLabel
+            // FirstWelcomeLabel
             // 
-            this.FirstLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FirstWelcomeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstLabel.AutoSize = true;
-            this.FirstLabel.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.FirstLabel.Location = new System.Drawing.Point(34, 249);
-            this.FirstLabel.Name = "FirstLabel";
-            this.FirstLabel.Size = new System.Drawing.Size(401, 33);
-            this.FirstLabel.TabIndex = 22;
-            this.FirstLabel.Text = "It\'s a great pleasure to have you here with us.";
+            this.FirstWelcomeLabel.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstWelcomeLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.FirstWelcomeLabel.Location = new System.Drawing.Point(34, 249);
+            this.FirstWelcomeLabel.Name = "FirstWelcomeLabel";
+            this.FirstWelcomeLabel.Size = new System.Drawing.Size(401, 33);
+            this.FirstWelcomeLabel.TabIndex = 22;
+            this.FirstWelcomeLabel.Text = "It\'s a great pleasure to have you here with us.";
             // 
             // MenuLabel
             // 
             this.MenuLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MenuLabel.AutoSize = true;
+            this.MenuLabel.AutoSize = false;
             this.MenuLabel.Font = new System.Drawing.Font("Edwardian Script ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.MenuLabel.Location = new System.Drawing.Point(40, 93);
@@ -1323,6 +1322,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 475);
+            this.Controls.Add(this.MenuGroupBox);
             this.Controls.Add(this.RobotPerformanceButton);
             this.Controls.Add(this.ScoutsDetailsButton);
             this.Controls.Add(this.HumanControlGroupBox);
@@ -1335,7 +1335,6 @@
             this.Controls.Add(this.MatchNumberGroupBox);
             this.Controls.Add(this.TeamDetailsGroupBox);
             this.Controls.Add(this.MatchPerformanceGroupBox);
-            this.Controls.Add(this.MenuGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
             this.MinimumSize = new System.Drawing.Size(313, 381);
             this.Name = "MainForm";
@@ -1429,7 +1428,7 @@
         private System.Windows.Forms.Button ScoutsDetailsButton;
         private System.Windows.Forms.Button RobotPerformanceButton;
         private System.Windows.Forms.GroupBox MenuGroupBox;
-        private System.Windows.Forms.Label FirstLabel;
+        private System.Windows.Forms.Label FirstWelcomeLabel;
         private System.Windows.Forms.Label MenuLabel;
         private System.Windows.Forms.PictureBox RobotCopyPictureBox;
         private System.Windows.Forms.GroupBox ScorePointsGroupBox;
