@@ -80,6 +80,7 @@ namespace ASSIGNMENT2
             HumanControlGroupBox.Visible = false;
             TeamDetailsGroupBox.Visible = false;
             ScorePointsGroupBox.Visible = false;
+            MatchNumberGroupBox.Visible = false;
             MenuGroupBox.Visible = true;
         }
 
@@ -142,6 +143,7 @@ namespace ASSIGNMENT2
         {
             MenuGroupBox.Visible = false;
             TeamDetailsGroupBox.Visible = true;
+            MatchNumberGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = true;
@@ -153,6 +155,7 @@ namespace ASSIGNMENT2
         {
             MenuGroupBox.Visible = false;
             TeamDetailsGroupBox.Visible = true;
+            MatchNumberGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = true;
             HumanControlGroupBox.Visible = true;
             RobotGroupBox.Visible = false;
@@ -164,6 +167,7 @@ namespace ASSIGNMENT2
         {
             MenuGroupBox.Visible = false;
             TeamDetailsGroupBox.Visible = true;
+            MatchNumberGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = false;
@@ -175,6 +179,7 @@ namespace ASSIGNMENT2
         {
             MenuGroupBox.Visible = false;
             TeamDetailsGroupBox.Visible = true;
+            MatchNumberGroupBox.Visible = true;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
             RobotGroupBox.Visible = false;
