@@ -112,8 +112,8 @@
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.AutoDrivingForwardButton = new System.Windows.Forms.Button();
             this.MatchNumberGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.MatchNumberTextBox = new System.Windows.Forms.TextBox();
+            this.MatchNumberLabel = new System.Windows.Forms.Label();
             this.HumanControlGroupBox.SuspendLayout();
             this.AutonomousDetailsGroupBox.SuspendLayout();
             this.MatchPerformanceGroupBox.SuspendLayout();
@@ -1035,10 +1035,11 @@
             // ExportMenuButton
             // 
             this.ExportMenuButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ExportMenuButton.Location = new System.Drawing.Point(6, 271);
+            this.ExportMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExportMenuButton.Location = new System.Drawing.Point(6, 314);
             this.ExportMenuButton.Margin = new System.Windows.Forms.Padding(2);
             this.ExportMenuButton.Name = "ExportMenuButton";
-            this.ExportMenuButton.Size = new System.Drawing.Size(168, 62);
+            this.ExportMenuButton.Size = new System.Drawing.Size(168, 76);
             this.ExportMenuButton.TabIndex = 10;
             this.ExportMenuButton.Text = "Export";
             this.ExportMenuButton.UseVisualStyleBackColor = false;
@@ -1047,10 +1048,11 @@
             // ImportMenuButton
             // 
             this.ImportMenuButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ImportMenuButton.Location = new System.Drawing.Point(6, 337);
+            this.ImportMenuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImportMenuButton.Location = new System.Drawing.Point(6, 390);
             this.ImportMenuButton.Margin = new System.Windows.Forms.Padding(2);
             this.ImportMenuButton.Name = "ImportMenuButton";
-            this.ImportMenuButton.Size = new System.Drawing.Size(168, 62);
+            this.ImportMenuButton.Size = new System.Drawing.Size(168, 76);
             this.ImportMenuButton.TabIndex = 11;
             this.ImportMenuButton.Text = "Import";
             this.ImportMenuButton.UseVisualStyleBackColor = false;
@@ -1058,10 +1060,11 @@
             // PointButton
             // 
             this.PointButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.PointButton.Location = new System.Drawing.Point(6, 206);
+            this.PointButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PointButton.Location = new System.Drawing.Point(6, 238);
             this.PointButton.Margin = new System.Windows.Forms.Padding(2);
             this.PointButton.Name = "PointButton";
-            this.PointButton.Size = new System.Drawing.Size(168, 62);
+            this.PointButton.Size = new System.Drawing.Size(168, 76);
             this.PointButton.TabIndex = 12;
             this.PointButton.Text = "Score Points";
             this.PointButton.UseVisualStyleBackColor = false;
@@ -1070,10 +1073,11 @@
             // MatchPerformanceButton
             // 
             this.MatchPerformanceButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.MatchPerformanceButton.Location = new System.Drawing.Point(6, 141);
+            this.MatchPerformanceButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MatchPerformanceButton.Location = new System.Drawing.Point(6, 162);
             this.MatchPerformanceButton.Margin = new System.Windows.Forms.Padding(2);
             this.MatchPerformanceButton.Name = "MatchPerformanceButton";
-            this.MatchPerformanceButton.Size = new System.Drawing.Size(168, 62);
+            this.MatchPerformanceButton.Size = new System.Drawing.Size(168, 76);
             this.MatchPerformanceButton.TabIndex = 13;
             this.MatchPerformanceButton.Text = "Match Performance";
             this.MatchPerformanceButton.UseVisualStyleBackColor = false;
@@ -1082,10 +1086,11 @@
             // ScoutsDetailsButton
             // 
             this.ScoutsDetailsButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ScoutsDetailsButton.Location = new System.Drawing.Point(6, 76);
+            this.ScoutsDetailsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ScoutsDetailsButton.Location = new System.Drawing.Point(6, 86);
             this.ScoutsDetailsButton.Margin = new System.Windows.Forms.Padding(2);
             this.ScoutsDetailsButton.Name = "ScoutsDetailsButton";
-            this.ScoutsDetailsButton.Size = new System.Drawing.Size(168, 62);
+            this.ScoutsDetailsButton.Size = new System.Drawing.Size(168, 76);
             this.ScoutsDetailsButton.TabIndex = 14;
             this.ScoutsDetailsButton.Text = "Scouts Details";
             this.ScoutsDetailsButton.UseVisualStyleBackColor = false;
@@ -1094,10 +1099,11 @@
             // RobotPerformanceButton
             // 
             this.RobotPerformanceButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.RobotPerformanceButton.Location = new System.Drawing.Point(6, 11);
+            this.RobotPerformanceButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RobotPerformanceButton.Location = new System.Drawing.Point(6, 10);
             this.RobotPerformanceButton.Margin = new System.Windows.Forms.Padding(2);
             this.RobotPerformanceButton.Name = "RobotPerformanceButton";
-            this.RobotPerformanceButton.Size = new System.Drawing.Size(168, 62);
+            this.RobotPerformanceButton.Size = new System.Drawing.Size(168, 76);
             this.RobotPerformanceButton.TabIndex = 15;
             this.RobotPerformanceButton.Text = "Robot Performance";
             this.RobotPerformanceButton.UseVisualStyleBackColor = false;
@@ -1283,8 +1289,8 @@
             // 
             // MatchNumberGroupBox
             // 
-            this.MatchNumberGroupBox.Controls.Add(this.textBox1);
-            this.MatchNumberGroupBox.Controls.Add(this.label2);
+            this.MatchNumberGroupBox.Controls.Add(this.MatchNumberTextBox);
+            this.MatchNumberGroupBox.Controls.Add(this.MatchNumberLabel);
             this.MatchNumberGroupBox.Location = new System.Drawing.Point(192, 110);
             this.MatchNumberGroupBox.Name = "MatchNumberGroupBox";
             this.MatchNumberGroupBox.Size = new System.Drawing.Size(471, 48);
@@ -1292,24 +1298,25 @@
             this.MatchNumberGroupBox.TabStop = false;
             this.MatchNumberGroupBox.Text = "Match Number";
             // 
-            // textBox1
+            // MatchNumberTextBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(106, 16);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(337, 20);
-            this.textBox1.TabIndex = 3;
+            this.MatchNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MatchNumberTextBox.Location = new System.Drawing.Point(106, 16);
+            this.MatchNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MatchNumberTextBox.Name = "MatchNumberTextBox";
+            this.MatchNumberTextBox.Size = new System.Drawing.Size(337, 20);
+            this.MatchNumberTextBox.TabIndex = 3;
+            this.MatchNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MatchNumberTextBox_KeyPress);
             // 
-            // label2
+            // MatchNumberLabel
             // 
-            this.label2.Location = new System.Drawing.Point(14, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Number";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MatchNumberLabel.Location = new System.Drawing.Point(14, 16);
+            this.MatchNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.MatchNumberLabel.Name = "MatchNumberLabel";
+            this.MatchNumberLabel.Size = new System.Drawing.Size(88, 19);
+            this.MatchNumberLabel.TabIndex = 2;
+            this.MatchNumberLabel.Text = "Number";
+            this.MatchNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MainForm
             // 
@@ -1439,7 +1446,7 @@
         private System.Windows.Forms.Button AutoDrivingForwardButton;
         private System.Windows.Forms.Label ScorePointsLabel;
         private System.Windows.Forms.GroupBox MatchNumberGroupBox;
-        internal System.Windows.Forms.TextBox textBox1;
-        internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.TextBox MatchNumberTextBox;
+        internal System.Windows.Forms.Label MatchNumberLabel;
     }
 }

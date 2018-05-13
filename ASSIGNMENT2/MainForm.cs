@@ -231,5 +231,13 @@ namespace ASSIGNMENT2
         {
             Score.Text = (20 + Double.Parse(Score.Text)).ToString();
         }
+
+        private void MatchNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || e.KeyChar == (char)(Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
