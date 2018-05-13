@@ -139,8 +139,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.HighGoalBox.Location = new System.Drawing.Point(107, 151);
-            this.HighGoalBox.Margin = new System.Windows.Forms.Padding(2);
+            this.HighGoalBox.Location = new System.Drawing.Point(214, 290);
+            this.HighGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HighGoalBox.Name = "HighGoalBox";
             this.HighGoalBox.Size = new System.Drawing.Size(349, 21);
             this.HighGoalBox.TabIndex = 13;
@@ -148,10 +148,10 @@
             // 
             // HighGoalLabel
             // 
-            this.HighGoalLabel.Location = new System.Drawing.Point(14, 151);
-            this.HighGoalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HighGoalLabel.Location = new System.Drawing.Point(28, 290);
+            this.HighGoalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HighGoalLabel.Name = "HighGoalLabel";
-            this.HighGoalLabel.Size = new System.Drawing.Size(88, 19);
+            this.HighGoalLabel.Size = new System.Drawing.Size(176, 37);
             this.HighGoalLabel.TabIndex = 12;
             this.HighGoalLabel.Text = "High Goal";
             this.HighGoalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -169,8 +169,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.LowGoalBox.Location = new System.Drawing.Point(107, 127);
-            this.LowGoalBox.Margin = new System.Windows.Forms.Padding(2);
+            this.LowGoalBox.Location = new System.Drawing.Point(214, 244);
+            this.LowGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LowGoalBox.Name = "LowGoalBox";
             this.LowGoalBox.Size = new System.Drawing.Size(349, 21);
             this.LowGoalBox.TabIndex = 11;
@@ -178,10 +178,10 @@
             // 
             // LowGoalLabel
             // 
-            this.LowGoalLabel.Location = new System.Drawing.Point(14, 127);
-            this.LowGoalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LowGoalLabel.Location = new System.Drawing.Point(28, 244);
+            this.LowGoalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LowGoalLabel.Name = "LowGoalLabel";
-            this.LowGoalLabel.Size = new System.Drawing.Size(88, 19);
+            this.LowGoalLabel.Size = new System.Drawing.Size(176, 37);
             this.LowGoalLabel.TabIndex = 10;
             this.LowGoalLabel.Text = "Low Goal";
             this.LowGoalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,8 +199,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.MiddleBarBox.Location = new System.Drawing.Point(107, 102);
-            this.MiddleBarBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MiddleBarBox.Location = new System.Drawing.Point(214, 196);
+            this.MiddleBarBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MiddleBarBox.Name = "MiddleBarBox";
             this.MiddleBarBox.Size = new System.Drawing.Size(349, 21);
             this.MiddleBarBox.TabIndex = 9;
@@ -208,10 +208,10 @@
             // 
             // MiddleBarLabel
             // 
-            this.MiddleBarLabel.Location = new System.Drawing.Point(14, 102);
-            this.MiddleBarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.MiddleBarLabel.Location = new System.Drawing.Point(28, 196);
+            this.MiddleBarLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MiddleBarLabel.Name = "MiddleBarLabel";
-            this.MiddleBarLabel.Size = new System.Drawing.Size(88, 19);
+            this.MiddleBarLabel.Size = new System.Drawing.Size(176, 37);
             this.MiddleBarLabel.TabIndex = 8;
             this.MiddleBarLabel.Text = "Middle Bar";
             this.MiddleBarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -229,8 +229,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.PickUpBallBox.Location = new System.Drawing.Point(107, 78);
-            this.PickUpBallBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PickUpBallBox.Location = new System.Drawing.Point(214, 150);
+            this.PickUpBallBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PickUpBallBox.Name = "PickUpBallBox";
             this.PickUpBallBox.Size = new System.Drawing.Size(349, 21);
             this.PickUpBallBox.TabIndex = 7;
@@ -238,10 +238,10 @@
             // 
             // PickUpBallLabel
             // 
-            this.PickUpBallLabel.Location = new System.Drawing.Point(14, 78);
-            this.PickUpBallLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PickUpBallLabel.Location = new System.Drawing.Point(28, 150);
+            this.PickUpBallLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PickUpBallLabel.Name = "PickUpBallLabel";
-            this.PickUpBallLabel.Size = new System.Drawing.Size(88, 19);
+            this.PickUpBallLabel.Size = new System.Drawing.Size(176, 37);
             this.PickUpBallLabel.TabIndex = 6;
             this.PickUpBallLabel.Text = "Pick Up Ball";
             this.PickUpBallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,8 +259,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.CatchBallBox.Location = new System.Drawing.Point(107, 54);
-            this.CatchBallBox.Margin = new System.Windows.Forms.Padding(2);
+            this.CatchBallBox.Location = new System.Drawing.Point(214, 104);
+            this.CatchBallBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CatchBallBox.Name = "CatchBallBox";
             this.CatchBallBox.Size = new System.Drawing.Size(349, 21);
             this.CatchBallBox.TabIndex = 5;
@@ -268,10 +268,10 @@
             // 
             // CatchBallLabel
             // 
-            this.CatchBallLabel.Location = new System.Drawing.Point(14, 54);
-            this.CatchBallLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CatchBallLabel.Location = new System.Drawing.Point(28, 104);
+            this.CatchBallLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CatchBallLabel.Name = "CatchBallLabel";
-            this.CatchBallLabel.Size = new System.Drawing.Size(88, 19);
+            this.CatchBallLabel.Size = new System.Drawing.Size(176, 37);
             this.CatchBallLabel.TabIndex = 4;
             this.CatchBallLabel.Text = "Catch Ball";
             this.CatchBallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -289,8 +289,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.PassBallBox.Location = new System.Drawing.Point(107, 29);
-            this.PassBallBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PassBallBox.Location = new System.Drawing.Point(214, 56);
+            this.PassBallBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PassBallBox.Name = "PassBallBox";
             this.PassBallBox.Size = new System.Drawing.Size(349, 21);
             this.PassBallBox.TabIndex = 3;
@@ -298,10 +298,10 @@
             // 
             // PassBallLabel
             // 
-            this.PassBallLabel.Location = new System.Drawing.Point(14, 29);
-            this.PassBallLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PassBallLabel.Location = new System.Drawing.Point(28, 56);
+            this.PassBallLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PassBallLabel.Name = "PassBallLabel";
-            this.PassBallLabel.Size = new System.Drawing.Size(88, 19);
+            this.PassBallLabel.Size = new System.Drawing.Size(176, 37);
             this.PassBallLabel.TabIndex = 2;
             this.PassBallLabel.Text = "Pass Ball";
             this.PassBallLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -345,8 +345,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.AutoHighGoalBox.Location = new System.Drawing.Point(107, 80);
-            this.AutoHighGoalBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AutoHighGoalBox.Location = new System.Drawing.Point(214, 154);
+            this.AutoHighGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AutoHighGoalBox.Name = "AutoHighGoalBox";
             this.AutoHighGoalBox.Size = new System.Drawing.Size(343, 21);
             this.AutoHighGoalBox.TabIndex = 7;
@@ -354,10 +354,10 @@
             // 
             // AutoHighGoalLabel
             // 
-            this.AutoHighGoalLabel.Location = new System.Drawing.Point(14, 80);
-            this.AutoHighGoalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AutoHighGoalLabel.Location = new System.Drawing.Point(28, 154);
+            this.AutoHighGoalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AutoHighGoalLabel.Name = "AutoHighGoalLabel";
-            this.AutoHighGoalLabel.Size = new System.Drawing.Size(88, 19);
+            this.AutoHighGoalLabel.Size = new System.Drawing.Size(176, 37);
             this.AutoHighGoalLabel.TabIndex = 6;
             this.AutoHighGoalLabel.Text = "High Goal";
             this.AutoHighGoalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -375,8 +375,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.AutoLowGoalBox.Location = new System.Drawing.Point(107, 54);
-            this.AutoLowGoalBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AutoLowGoalBox.Location = new System.Drawing.Point(214, 104);
+            this.AutoLowGoalBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AutoLowGoalBox.Name = "AutoLowGoalBox";
             this.AutoLowGoalBox.Size = new System.Drawing.Size(343, 21);
             this.AutoLowGoalBox.TabIndex = 4;
@@ -384,10 +384,10 @@
             // 
             // AutoLowGoalLabel
             // 
-            this.AutoLowGoalLabel.Location = new System.Drawing.Point(14, 55);
-            this.AutoLowGoalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AutoLowGoalLabel.Location = new System.Drawing.Point(28, 106);
+            this.AutoLowGoalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AutoLowGoalLabel.Name = "AutoLowGoalLabel";
-            this.AutoLowGoalLabel.Size = new System.Drawing.Size(88, 19);
+            this.AutoLowGoalLabel.Size = new System.Drawing.Size(176, 37);
             this.AutoLowGoalLabel.TabIndex = 0;
             this.AutoLowGoalLabel.Text = "Low Goal";
             this.AutoLowGoalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -405,8 +405,8 @@
             "Unknown",
             "Yes",
             "No"});
-            this.AutoForwardBox.Location = new System.Drawing.Point(107, 29);
-            this.AutoForwardBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AutoForwardBox.Location = new System.Drawing.Point(214, 56);
+            this.AutoForwardBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AutoForwardBox.Name = "AutoForwardBox";
             this.AutoForwardBox.Size = new System.Drawing.Size(343, 21);
             this.AutoForwardBox.TabIndex = 3;
@@ -811,10 +811,10 @@
             // 
             // DescriptionLabel
             // 
-            this.DescriptionLabel.Location = new System.Drawing.Point(15, 130);
-            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DescriptionLabel.Location = new System.Drawing.Point(30, 250);
+            this.DescriptionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(88, 19);
+            this.DescriptionLabel.Size = new System.Drawing.Size(176, 37);
             this.DescriptionLabel.TabIndex = 10;
             this.DescriptionLabel.Text = "Description";
             this.DescriptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -835,18 +835,18 @@
             "Average",
             "Good",
             "Excellent"});
-            this.OverallAttackBox.Location = new System.Drawing.Point(107, 105);
-            this.OverallAttackBox.Margin = new System.Windows.Forms.Padding(2);
+            this.OverallAttackBox.Location = new System.Drawing.Point(214, 202);
+            this.OverallAttackBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OverallAttackBox.Name = "OverallAttackBox";
             this.OverallAttackBox.Size = new System.Drawing.Size(349, 21);
             this.OverallAttackBox.TabIndex = 9;
             // 
             // OverallAttackLabel
             // 
-            this.OverallAttackLabel.Location = new System.Drawing.Point(15, 105);
-            this.OverallAttackLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OverallAttackLabel.Location = new System.Drawing.Point(30, 202);
+            this.OverallAttackLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OverallAttackLabel.Name = "OverallAttackLabel";
-            this.OverallAttackLabel.Size = new System.Drawing.Size(88, 19);
+            this.OverallAttackLabel.Size = new System.Drawing.Size(176, 37);
             this.OverallAttackLabel.TabIndex = 8;
             this.OverallAttackLabel.Text = "Overall Attack";
             this.OverallAttackLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -867,18 +867,18 @@
             "Average",
             "Good",
             "Excellent"});
-            this.SpeedBox.Location = new System.Drawing.Point(107, 80);
-            this.SpeedBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SpeedBox.Location = new System.Drawing.Point(214, 154);
+            this.SpeedBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SpeedBox.Name = "SpeedBox";
             this.SpeedBox.Size = new System.Drawing.Size(349, 21);
             this.SpeedBox.TabIndex = 7;
             // 
             // SpeedLabel
             // 
-            this.SpeedLabel.Location = new System.Drawing.Point(14, 80);
-            this.SpeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpeedLabel.Location = new System.Drawing.Point(28, 154);
+            this.SpeedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SpeedLabel.Name = "SpeedLabel";
-            this.SpeedLabel.Size = new System.Drawing.Size(88, 19);
+            this.SpeedLabel.Size = new System.Drawing.Size(176, 37);
             this.SpeedLabel.TabIndex = 6;
             this.SpeedLabel.Text = "Speed";
             this.SpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1012,6 +1012,82 @@
             this.RobotCopyPictureBox.TabIndex = 15;
             this.RobotCopyPictureBox.TabStop = false;
             // 
+            // AutoForwardLabel
+            // 
+            this.AutoForwardLabel.Location = new System.Drawing.Point(28, 56);
+            this.AutoForwardLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AutoForwardLabel.Name = "AutoForwardLabel";
+            this.AutoForwardLabel.Size = new System.Drawing.Size(176, 37);
+            this.AutoForwardLabel.TabIndex = 0;
+            this.AutoForwardLabel.Text = "Drive Forward";
+            this.AutoForwardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TeamNameBox
+            // 
+            this.TeamNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TeamNameBox.Location = new System.Drawing.Point(214, 94);
+            this.TeamNameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamNameBox.Name = "TeamNameBox";
+            this.TeamNameBox.Size = new System.Drawing.Size(300, 31);
+            this.TeamNameBox.TabIndex = 2;
+            // 
+            // TeamNameLabel
+            // 
+            this.TeamNameLabel.Location = new System.Drawing.Point(28, 94);
+            this.TeamNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TeamNameLabel.Name = "TeamNameLabel";
+            this.TeamNameLabel.Size = new System.Drawing.Size(176, 37);
+            this.TeamNameLabel.TabIndex = 0;
+            this.TeamNameLabel.Text = "Name";
+            this.TeamNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TeamNumberBox
+            // 
+            this.TeamNumberBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TeamNumberBox.Location = new System.Drawing.Point(214, 50);
+            this.TeamNumberBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamNumberBox.Name = "TeamNumberBox";
+            this.TeamNumberBox.Size = new System.Drawing.Size(300, 31);
+            this.TeamNumberBox.TabIndex = 1;
+            this.TeamNumberBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TeamNumberBox_KeyPress);
+            // 
+            // TeamNumberLabel
+            // 
+            this.TeamNumberLabel.Location = new System.Drawing.Point(28, 50);
+            this.TeamNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TeamNumberLabel.Name = "TeamNumberLabel";
+            this.TeamNumberLabel.Size = new System.Drawing.Size(176, 37);
+            this.TeamNumberLabel.TabIndex = 0;
+            this.TeamNumberLabel.Text = "Number";
+            this.TeamNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TeamDetailsGroupBox
+            // 
+            this.TeamDetailsGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TeamDetailsGroupBox.Controls.Add(this.RobotCopyPictureBox);
+            this.TeamDetailsGroupBox.Controls.Add(this.TeamNameBox);
+            this.TeamDetailsGroupBox.Controls.Add(this.TeamNameLabel);
+            this.TeamDetailsGroupBox.Controls.Add(this.TeamNumberBox);
+            this.TeamDetailsGroupBox.Controls.Add(this.TeamNumberLabel);
+            this.TeamDetailsGroupBox.Location = new System.Drawing.Point(394, 37);
+            this.TeamDetailsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamDetailsGroupBox.Name = "TeamDetailsGroupBox";
+            this.TeamDetailsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TeamDetailsGroupBox.Size = new System.Drawing.Size(912, 162);
+            this.TeamDetailsGroupBox.TabIndex = 3;
+            this.TeamDetailsGroupBox.TabStop = false;
+            this.TeamDetailsGroupBox.Text = "Team Details";
+            // 
+            // RobotCopyPictureBox
+            // 
+            this.RobotCopyPictureBox.Location = new System.Drawing.Point(594, 19);
+            this.RobotCopyPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.RobotCopyPictureBox.Name = "RobotCopyPictureBox";
+            this.RobotCopyPictureBox.Size = new System.Drawing.Size(190, 133);
+            this.RobotCopyPictureBox.TabIndex = 15;
+            this.RobotCopyPictureBox.TabStop = false;
+            // 
             // SaveButton
             // 
             this.SaveButton.Location = new System.Drawing.Point(248, 819);
@@ -1141,9 +1217,10 @@
             this.MenuLabel.AutoSize = false;
             this.MenuLabel.Font = new System.Drawing.Font("Edwardian Script ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.MenuLabel.Location = new System.Drawing.Point(40, 93);
+            this.MenuLabel.Location = new System.Drawing.Point(80, 179);
+            this.MenuLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.MenuLabel.Name = "MenuLabel";
-            this.MenuLabel.Size = new System.Drawing.Size(378, 57);
+            this.MenuLabel.Size = new System.Drawing.Size(991, 108);
             this.MenuLabel.TabIndex = 21;
             this.MenuLabel.Text = "Aerial Assist Scouting";
             this.MenuLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1180,9 +1257,10 @@
             // 
             // SecondPassButton
             // 
-            this.SecondPassButton.Location = new System.Drawing.Point(311, 180);
+            this.SecondPassButton.Location = new System.Drawing.Point(622, 346);
+            this.SecondPassButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SecondPassButton.Name = "SecondPassButton";
-            this.SecondPassButton.Size = new System.Drawing.Size(107, 43);
+            this.SecondPassButton.Size = new System.Drawing.Size(214, 83);
             this.SecondPassButton.TabIndex = 10;
             this.SecondPassButton.Text = "Second Pass";
             this.SecondPassButton.UseVisualStyleBackColor = true;
@@ -1190,9 +1268,10 @@
             // 
             // FirstPassButton
             // 
-            this.FirstPassButton.Location = new System.Drawing.Point(182, 181);
+            this.FirstPassButton.Location = new System.Drawing.Point(364, 348);
+            this.FirstPassButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.FirstPassButton.Name = "FirstPassButton";
-            this.FirstPassButton.Size = new System.Drawing.Size(107, 43);
+            this.FirstPassButton.Size = new System.Drawing.Size(214, 83);
             this.FirstPassButton.TabIndex = 9;
             this.FirstPassButton.Text = "First Pass";
             this.FirstPassButton.UseVisualStyleBackColor = true;
@@ -1200,9 +1279,10 @@
             // 
             // CatchingButton
             // 
-            this.CatchingButton.Location = new System.Drawing.Point(49, 180);
+            this.CatchingButton.Location = new System.Drawing.Point(98, 346);
+            this.CatchingButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.CatchingButton.Name = "CatchingButton";
-            this.CatchingButton.Size = new System.Drawing.Size(107, 43);
+            this.CatchingButton.Size = new System.Drawing.Size(214, 83);
             this.CatchingButton.TabIndex = 8;
             this.CatchingButton.Text = "Catching";
             this.CatchingButton.UseVisualStyleBackColor = true;
@@ -1210,9 +1290,10 @@
             // 
             // OverMiddleBarButton
             // 
-            this.OverMiddleBarButton.Location = new System.Drawing.Point(311, 116);
+            this.OverMiddleBarButton.Location = new System.Drawing.Point(622, 223);
+            this.OverMiddleBarButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.OverMiddleBarButton.Name = "OverMiddleBarButton";
-            this.OverMiddleBarButton.Size = new System.Drawing.Size(107, 43);
+            this.OverMiddleBarButton.Size = new System.Drawing.Size(214, 83);
             this.OverMiddleBarButton.TabIndex = 7;
             this.OverMiddleBarButton.Text = "Over Middle Bar";
             this.OverMiddleBarButton.UseVisualStyleBackColor = true;
@@ -1220,9 +1301,10 @@
             // 
             // LowGoalButton
             // 
-            this.LowGoalButton.Location = new System.Drawing.Point(49, 116);
+            this.LowGoalButton.Location = new System.Drawing.Point(98, 223);
+            this.LowGoalButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.LowGoalButton.Name = "LowGoalButton";
-            this.LowGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.LowGoalButton.Size = new System.Drawing.Size(214, 83);
             this.LowGoalButton.TabIndex = 6;
             this.LowGoalButton.Text = "Low Goal";
             this.LowGoalButton.UseVisualStyleBackColor = true;
@@ -1230,9 +1312,10 @@
             // 
             // HighGoalButton
             // 
-            this.HighGoalButton.Location = new System.Drawing.Point(181, 116);
+            this.HighGoalButton.Location = new System.Drawing.Point(362, 223);
+            this.HighGoalButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.HighGoalButton.Name = "HighGoalButton";
-            this.HighGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.HighGoalButton.Size = new System.Drawing.Size(214, 83);
             this.HighGoalButton.TabIndex = 5;
             this.HighGoalButton.Text = "High Goal";
             this.HighGoalButton.UseVisualStyleBackColor = true;
@@ -1240,9 +1323,10 @@
             // 
             // AutoHighGoalButton
             // 
-            this.AutoHighGoalButton.Location = new System.Drawing.Point(311, 48);
+            this.AutoHighGoalButton.Location = new System.Drawing.Point(622, 92);
+            this.AutoHighGoalButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AutoHighGoalButton.Name = "AutoHighGoalButton";
-            this.AutoHighGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.AutoHighGoalButton.Size = new System.Drawing.Size(214, 83);
             this.AutoHighGoalButton.TabIndex = 4;
             this.AutoHighGoalButton.Text = "Auto High Goal";
             this.AutoHighGoalButton.UseVisualStyleBackColor = true;
@@ -1250,9 +1334,10 @@
             // 
             // AutoLowGoalButton
             // 
-            this.AutoLowGoalButton.Location = new System.Drawing.Point(181, 48);
+            this.AutoLowGoalButton.Location = new System.Drawing.Point(362, 92);
+            this.AutoLowGoalButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AutoLowGoalButton.Name = "AutoLowGoalButton";
-            this.AutoLowGoalButton.Size = new System.Drawing.Size(107, 43);
+            this.AutoLowGoalButton.Size = new System.Drawing.Size(214, 83);
             this.AutoLowGoalButton.TabIndex = 3;
             this.AutoLowGoalButton.Text = "Auto Low Goal";
             this.AutoLowGoalButton.UseVisualStyleBackColor = true;
@@ -1260,9 +1345,10 @@
             // 
             // Score
             // 
-            this.Score.Location = new System.Drawing.Point(272, 245);
+            this.Score.Location = new System.Drawing.Point(544, 471);
+            this.Score.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Score.Name = "Score";
-            this.Score.Size = new System.Drawing.Size(100, 20);
+            this.Score.Size = new System.Drawing.Size(196, 31);
             this.Score.TabIndex = 2;
             this.Score.Text = "0";
             this.Score.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -1270,17 +1356,19 @@
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
-            this.ScoreLabel.Location = new System.Drawing.Point(132, 251);
+            this.ScoreLabel.Location = new System.Drawing.Point(264, 483);
+            this.ScoreLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(134, 13);
+            this.ScoreLabel.Size = new System.Drawing.Size(270, 25);
             this.ScoreLabel.TabIndex = 1;
             this.ScoreLabel.Text = "You get an overall score of";
             // 
             // AutoDrivingForwardButton
             // 
-            this.AutoDrivingForwardButton.Location = new System.Drawing.Point(49, 48);
+            this.AutoDrivingForwardButton.Location = new System.Drawing.Point(98, 92);
+            this.AutoDrivingForwardButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.AutoDrivingForwardButton.Name = "AutoDrivingForwardButton";
-            this.AutoDrivingForwardButton.Size = new System.Drawing.Size(107, 43);
+            this.AutoDrivingForwardButton.Size = new System.Drawing.Size(214, 83);
             this.AutoDrivingForwardButton.TabIndex = 0;
             this.AutoDrivingForwardButton.Text = "Auto Driving Forward";
             this.AutoDrivingForwardButton.UseVisualStyleBackColor = true;
@@ -1319,7 +1407,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(674, 475);
             this.Controls.Add(this.MenuGroupBox);
