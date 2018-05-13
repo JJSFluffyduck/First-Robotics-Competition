@@ -589,6 +589,7 @@
             this.OverallAttackBox.ForeColor = System.Drawing.Color.Black;
             this.OverallAttackBox.FormattingEnabled = true;
             this.OverallAttackBox.Items.AddRange(new object[] {
+            "Unknown",
             "Terrible",
             "Bad",
             "Average",
@@ -620,6 +621,7 @@
             this.SpeedBox.ForeColor = System.Drawing.Color.Black;
             this.SpeedBox.FormattingEnabled = true;
             this.SpeedBox.Items.AddRange(new object[] {
+            "Unknown",
             "Terrible",
             "Bad",
             "Average",
@@ -651,6 +653,7 @@
             this.ManeuverabilityBox.ForeColor = System.Drawing.Color.Black;
             this.ManeuverabilityBox.FormattingEnabled = true;
             this.ManeuverabilityBox.Items.AddRange(new object[] {
+            "Unknown",
             "Terrible",
             "Bad",
             "Average",
@@ -682,6 +685,7 @@
             this.OverallDefenseBox.ForeColor = System.Drawing.Color.Black;
             this.OverallDefenseBox.FormattingEnabled = true;
             this.OverallDefenseBox.Items.AddRange(new object[] {
+            "Unknown",
             "Terrible",
             "Bad",
             "Average",
