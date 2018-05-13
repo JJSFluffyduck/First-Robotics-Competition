@@ -13,14 +13,13 @@ namespace ASSIGNMENT2
 {
     public partial class MainForm : Form
     {
-        
         public MainForm()
         {
             InitializeComponent();
         }
 
         //All ComboBox use this funtion
-        private  void ComboBox_SelectedValueChanged(object sender, EventArgs e)
+        private void ComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             var cb = ((ComboBox)sender);
             cb.BackColor = Color.White;
@@ -71,48 +70,13 @@ namespace ASSIGNMENT2
             this.MatchThrowOverBox.SelectedIndex = 0;
             this.MatchLowGoalBox.SelectedIndex = 0;
             this.MatchHighGoalBox.SelectedIndex = 0;
-
-            RobotGroupBox.Visible = true;
-
-        }
-
-        private void RobotPerRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateDisplay();
-        }
-
-        private void ScoutsDetailsRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateDisplay();
-        }
-
-        private void MatchPerformanceRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateDisplay();
-        }
-
-        private void UpdateDisplay() {
-            System.Diagnostics.Debug.WriteLine("test");
-            System.Diagnostics.Debug.WriteLine(RobotPerRadioButton.Checked);
-
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
             AutonomousDetailsGroupBox.Visible = false;
             HumanControlGroupBox.Visible = false;
-            RobotGroupBox.Visible = true;
-            MatchPerformanceGroupBox.Visible = false;
-
-            if (RobotPerRadioButton.Checked)
-            {
-                RobotGroupBox.Visible = true;
-            }
-            else if (ScoutsDetailsRadioButton.Checked)
-            {
-                AutonomousDetailsGroupBox.Visible = true;
-                HumanControlGroupBox.Visible = true;
-            }
-            else if (MatchPerformanceRadioButton.Checked)
-            {
-                MatchPerformanceGroupBox.Visible = true;
-            }
+            TeamDetailsGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = false;
+            MenuGroupBox.Visible = true;
         }
 
         private void AddPictureButton_Click(object sender, EventArgs e)
@@ -122,6 +86,7 @@ namespace ASSIGNMENT2
             {
                 string image = openFileDialog.FileName;
                 RobotPictureBox.Image = Image.FromFile(@image);
+                RobotCopyPictureBox.Image = Image.FromFile(@image);
             }
         }
 
@@ -137,7 +102,7 @@ namespace ASSIGNMENT2
 
         private void ExportMenuButton_Click(object sender, EventArgs e)
         {
-            //before your loop
+            /*//before your loop
             var csv = new StringBuilder();
 
             //in your loop
@@ -166,7 +131,96 @@ namespace ASSIGNMENT2
             else
             {
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
-            }
+            }*/
+        }
+
+        private void RobotPerformanceButton_Click(object sender, EventArgs e)
+        {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = true;
+            MatchPerformanceGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = false;
+        }
+
+        private void ScoutsDetailsButton_Click(object sender, EventArgs e)
+        {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
+            AutonomousDetailsGroupBox.Visible = true;
+            HumanControlGroupBox.Visible = true;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = false;
+        }
+
+        private void MatchPerformanceButton_Click(object sender, EventArgs e)
+        {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = true;
+            ScorePointsGroupBox.Visible = false;
+        }
+
+        private void PointButton_Click(object sender, EventArgs e)
+        {
+            MenuGroupBox.Visible = false;
+            TeamDetailsGroupBox.Visible = true;
+            AutonomousDetailsGroupBox.Visible = false;
+            HumanControlGroupBox.Visible = false;
+            RobotGroupBox.Visible = false;
+            MatchPerformanceGroupBox.Visible = false;
+            ScorePointsGroupBox.Visible = true;
+        }
+
+        private void CatchingButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void AutoDrivingForwardButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (5 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void AutoLowGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (6 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void AutoHighGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (15 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void LowGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (1 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void HighGoalButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void OverMiddleBarButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void FirstPassButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (10 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void SecondPassButton_Click(object sender, EventArgs e)
+        {
+            Score.Text = (20 + Double.Parse(Score.Text)).ToString();
         }
     }
 }
