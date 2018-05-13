@@ -70,6 +70,10 @@ namespace ASSIGNMENT2
             this.MatchThrowOverBox.SelectedIndex = 0;
             this.MatchLowGoalBox.SelectedIndex = 0;
             this.MatchHighGoalBox.SelectedIndex = 0;
+            this.OverallAttackBox.SelectedIndex = 4;
+            this.SpeedBox.SelectedIndex = 4;
+            this.ManeuverabilityBox.SelectedIndex = 4;
+            this.OverallDefenseBox.SelectedIndex = 4;
             RobotGroupBox.Visible = false;
             MatchPerformanceGroupBox.Visible = false;
             AutonomousDetailsGroupBox.Visible = false;
