@@ -102,36 +102,71 @@ namespace ASSIGNMENT2
 
         private void ExportMenuButton_Click(object sender, EventArgs e)
         {
-            /*//before your loop
-            var csv = new StringBuilder();
+            Console.WriteLine("Scout write:"+ ScoutDataFilled());
+            Boolean ScoutDataChange = ScoutDataFilled();
+            if (ScoutDataChange) {
+                var csv = new StringBuilder();
 
-            //in your loop
-            var TeamNumber = TeamNumberBox.Text;
-            var TeamName = TeamNameBox.Text;
+                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text ,AutoForwardBox.Text, AutoLowGoalBox.Text, AutoHighGoalBox.Text, PassBallBox.Text, CatchBallBox.Text, PickUpBallBox.Text, MiddleBarBox.Text, LowGoalBox.Text, HighGoalBox.Text);
+                csv.AppendLine(newLine);
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "ScoutData" + ".csv", csv.ToString());
+            }
+            Console.WriteLine("Match write:" + MatchDataFilled());
+            Boolean MatchDataChange = MatchDataFilled();
+            if (MatchDataFilled()) {
+                var csv = new StringBuilder();
 
-            var AutoForward = AutoForwardBox.Text;
-            var AutoLow = AutoLowGoalBox.Text;
-            var AutoHigh = AutoHighGoalBox.Text;
-
-            var HumanPass = PassBallBox.Text;
-            var HumanCatch = CatchBallBox.Text;
-            var HumanPickUp = PickUpBallBox.Text;
-            var HumanMiddle = MiddleBarBox.Text;
-            var HumanLow = LowGoalBox.Text;
-            var HumanHigh = HighGoalBox.Text;
-
-            var newLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}", TeamNumber, TeamName, AutoForward, AutoLow, AutoHigh, HumanPass, HumanCatch, HumanPickUp, HumanMiddle, HumanLow, HumanHigh);
-            csv.AppendLine(newLine);
-
-            //after your loop
-            if (RobotPerRadioButton.Checked)
-            {
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "PreGame" + ".csv", csv.ToString());
+                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, OverallDefenseBox.Text, ManeuverabilityBox.Text, SpeedBox.Text, OverallAttackBox.Text, RobotDescriptionBox.Text, MatchDriveForwardBox.Text, MatchLowGoalAutoBox.Text, MatchHighGoalAutoBox.Text, MatchPassBallBox.Text, MatchCatchBallBox.Text, MatchCollectBallBox.Text, MatchThrowOverBox.Text, MatchLowGoalBox.Text, MatchHighGoalBox.Text, Score.Text);
+                csv.AppendLine(newLine);
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "MatchData" + ".csv", csv.ToString());
+            }
+            if (ScoutDataChange == false && MatchDataChange == false) {
+                MessageBox.Show("Failed: No data to export. Please update the data and re-export.");
             }
             else
             {
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "DuringGame" + ".csv", csv.ToString());
-            }*/
+                if (ScoutDataChange && MatchDataChange) {
+                    MessageBox.Show("Successfully exported:\n 2 data files exported \n Scout Data exported \n Match Data exported");
+                }else if (ScoutDataChange)
+                {
+                    MessageBox.Show("Successfully exported:\n 1 data files exported \n Scout Data exported \n No match data to export");
+                }
+                else
+                {
+                    MessageBox.Show("Successfully exported:\n 1 data files exported \n Match Data exported \n No scout data to export");
+                }
+            }
+
+        }
+
+        public Boolean ScoutDataFilled()
+        {
+            //Scouts details
+            if (AutoForwardBox.Text != "Unknown" || AutoLowGoalBox.Text != "Unknown" || AutoForwardBox.Text != "Unknown" || PassBallBox.Text != "Unknown" || CatchBallBox.Text != "Unknown" || PickUpBallBox.Text != "Unknown" || MiddleBarBox.Text != "Unknown" || LowGoalBox.Text != "Unknown" || HighGoalBox.Text != "Unknown")
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public Boolean MatchDataFilled()
+        {
+            //Robot Performance any data entered
+            if (OverallDefenseBox.Text + ManeuverabilityBox.Text + SpeedBox.Text + OverallAttackBox.Text + RobotDescriptionBox.Text != "")
+            {
+                return true;
+            }
+            //Match Performace
+            if (MatchDriveForwardBox.Text!="Unknown"||MatchLowGoalAutoBox.Text != "Unknown" || MatchHighGoalAutoBox.Text != "Unknown" || MatchPassBallBox.Text != "Unknown" || MatchCatchBallBox.Text != "Unknown" || MatchCollectBallBox.Text != "Unknown" || MatchThrowOverBox.Text != "Unknown" || MatchLowGoalBox.Text != "Unknown" || MatchHighGoalBox.Text != "Unknown")
+            {
+                return true;
+            }
+            //Score board
+            if (Score.Text != "0")
+            {
+                return true;
+            }
+            return false;
         }
 
         private void RobotPerformanceButton_Click(object sender, EventArgs e)
@@ -221,6 +256,11 @@ namespace ASSIGNMENT2
         private void SecondPassButton_Click(object sender, EventArgs e)
         {
             Score.Text = (20 + Double.Parse(Score.Text)).ToString();
+        }
+
+        private void ImportMenuButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
