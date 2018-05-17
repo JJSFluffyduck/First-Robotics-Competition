@@ -297,7 +297,145 @@ namespace ASSIGNMENT2
 
         private void ImportMenuButton_Click(object sender, EventArgs e)
         {
+            OpenFileDialog fdlg = new OpenFileDialog();
+            fdlg.Title = "Roborts File Explorer";
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.Filter = "All files (*.*)|*.*|All files (*.*)|*.*";
+            fdlg.FilterIndex = 2;
+            fdlg.RestoreDirectory = true;
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                Console.WriteLine(fdlg.FileName.Split('\\')[fdlg.FileName.Split('\\').Length-1].Split('.')[0]);
+                
+                using (var reader = new StreamReader(fdlg.FileName))
+                {
+                    String fileName = fdlg.FileName.Split('\\')[fdlg.FileName.Split('\\').Length - 1].Split('.')[0];
 
+                    List<string> TeamNumber = new List<string>();
+                    List<string> TeamName = new List<string>();
+                    List<string> MatchNumber = new List<string>();
+
+                    if (fileName == "ScoutData")
+                    {
+                        List<string> AutoForward = new List<string>();
+                        List<string> AutoLow = new List<string>();
+                        List<string> AutoHigh = new List<string>();
+
+                        List<string> HumanPass = new List<string>();
+                        List<string> HumanCatch = new List<string>();
+                        List<string> HumanPickUp = new List<string>();
+                        List<string> HumanMiddle = new List<string>();
+                        List<string> HumanLow = new List<string>();
+                        List<string> HumanHigh = new List<string>();
+
+                        while (!reader.EndOfStream)
+                        {
+                            var line = reader.ReadLine();
+                            var values = line.Split(',');
+
+                            TeamNumber.Add(values[0]);
+                            TeamName.Add(values[1]);
+                            MatchNumber.Add(values[2]);
+
+                            AutoForward.Add(values[3]);
+                            AutoLow.Add(values[4]);
+                            AutoHigh.Add(values[5]);
+
+                            HumanPass.Add(values[6]);
+                            HumanCatch.Add(values[7]);
+                            HumanPickUp.Add(values[8]);
+                            HumanMiddle.Add(values[9]);
+                            HumanLow.Add(values[10]);
+                            HumanHigh.Add(values[11]);
+                        }
+                        TeamNumberBox.Text = TeamNumber[0];
+                        TeamNameBox.Text = TeamName[0];
+                        MatchNumberTextBox.Text = MatchNumber[0];
+
+                        AutoForwardBox.Text = AutoForward[0];
+                        AutoLowGoalBox.Text = AutoLow[0];
+                        AutoHighGoalBox.Text = AutoHigh[0];
+
+                        PassBallBox.Text = HumanPass[0];
+                        CatchBallBox.Text = HumanCatch[0];
+                        PickUpBallBox.Text = HumanPickUp[0];
+                        MiddleBarBox.Text = HumanMiddle[0];
+                        LowGoalBox.Text = HumanLow[0];
+                        HighGoalBox.Text = HumanHigh[0];
+
+                    }else if (fileName == "MatchData")
+                    {
+                        List<string> OverallDefense = new List<string>();
+                        List<string> Maneuverability = new List<string>();
+                        List<string> Speed = new List<string>();
+                        List<string> OverallAttack = new List<string>();
+                        List<string> RobotDescription = new List<string>();
+
+                        List<string> MatchDriveForward = new List<string>();
+                        List<string> MatchLowGoalAuto = new List<string>();
+                        List<string> MatchHighGoalAuto = new List<string>();
+                        List<string> MatchPassBall = new List<string>();
+                        List<string> MatchCatchBall = new List<string>();
+                        List<string> MatchCollectBall = new List<string>();
+                        List<string> MatchThrowOver = new List<string>();
+                        List<string> MatchLowGoal = new List<string>();
+                        List<string> MatchHighGoal = new List<string>();
+                        List<string> ScoreArray = new List<string>();
+
+                        while (!reader.EndOfStream)
+                        {
+                            var line = reader.ReadLine();
+                            var values = line.Split(',');
+
+                            TeamNumber.Add(values[0]);
+                            TeamName.Add(values[1]);
+                            MatchNumber.Add(values[2]);
+
+                            OverallDefense.Add(values[3]);
+                            Maneuverability.Add(values[4]);
+                            Speed.Add(values[5]);
+                            OverallAttack.Add(values[6]);
+                            RobotDescription.Add(values[7]);
+
+                            MatchDriveForward.Add(values[8]);
+                            MatchLowGoalAuto.Add(values[9]);
+                            MatchHighGoalAuto.Add(values[10]);
+                            MatchPassBall.Add(values[11]);
+                            MatchCatchBall.Add(values[12]);
+                            MatchCollectBall.Add(values[13]);
+                            MatchThrowOver.Add(values[14]);
+                            MatchLowGoal.Add(values[15]);
+                            MatchHighGoal.Add(values[16]);
+                            ScoreArray.Add(values[17]);
+                        }
+                        TeamNumberBox.Text = TeamNumber[0];
+                        TeamNameBox.Text = TeamName[0];
+                        MatchNumberTextBox.Text = MatchNumber[0];
+
+                        OverallDefenseBox.Text = OverallDefense[0];
+                        ManeuverabilityBox.Text = Maneuverability[0];
+                        SpeedBox.Text = Speed[0];
+                        OverallAttackBox.Text = OverallAttack[0];
+                        RobotDescriptionBox.Text = RobotDescription[0];
+
+                        MatchDriveForwardBox.Text = MatchDriveForward[0];
+                        MatchLowGoalAutoBox.Text = MatchLowGoalAuto[0];
+                        MatchHighGoalAutoBox.Text = MatchHighGoalAuto[0];
+                        MatchPassBallBox.Text = MatchPassBall[0];
+                        MatchCatchBallBox.Text = MatchCatchBall[0];
+                        MatchCollectBallBox.Text = MatchCollectBall[0];
+                        MatchThrowOverBox.Text = MatchThrowOver[0];
+                        MatchLowGoalBox.Text = MatchLowGoal[0];
+                        MatchHighGoalBox.Text = MatchHighGoal[0];
+                        Score.Text = ScoreArray[0];
+                    }
+                    else
+                    {
+                        MessageBox.Show("File import failed. File was invalid, please try again.");
+                    }
+                }
+
+            }
         }
     }
 }
