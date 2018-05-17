@@ -1348,7 +1348,6 @@
             this.ClientSize = new System.Drawing.Size(1348, 913);
             this.Controls.Add(this.RobotPerformanceButton);
             this.Controls.Add(this.ScoutsDetailsButton);
-            this.Controls.Add(this.HumanControlGroupBox);
             this.Controls.Add(this.ScorePointsGroupBox);
             this.Controls.Add(this.MatchPerformanceButton);
             this.Controls.Add(this.PointButton);
@@ -1360,6 +1359,7 @@
             this.Controls.Add(this.MatchPerformanceGroupBox);
             this.Controls.Add(this.AutonomousDetailsGroupBox);
             this.Controls.Add(this.MenuGroupBox);
+            this.Controls.Add(this.HumanControlGroupBox);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(600, 667);
             this.Name = "MainForm";
