@@ -112,7 +112,7 @@ namespace ASSIGNMENT2
             if (ScoutDataChange) {
                 var csv = new StringBuilder();
 
-                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text ,AutoForwardBox.Text, AutoLowGoalBox.Text, AutoHighGoalBox.Text, PassBallBox.Text, CatchBallBox.Text, PickUpBallBox.Text, MiddleBarBox.Text, LowGoalBox.Text, HighGoalBox.Text);
+                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, AutoForwardBox.Text, AutoLowGoalBox.Text, AutoHighGoalBox.Text, PassBallBox.Text, CatchBallBox.Text, PickUpBallBox.Text, MiddleBarBox.Text, LowGoalBox.Text, HighGoalBox.Text);
                 csv.AppendLine(newLine);
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "ScoutData" + ".csv", csv.ToString());
             }
@@ -121,15 +121,30 @@ namespace ASSIGNMENT2
             if (MatchDataFilled()) {
                 var csv = new StringBuilder();
 
-                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, OverallDefenseBox.Text, ManeuverabilityBox.Text, SpeedBox.Text, OverallAttackBox.Text, RobotDescriptionBox.Text, MatchDriveForwardBox.Text, MatchLowGoalAutoBox.Text, MatchHighGoalAutoBox.Text, MatchPassBallBox.Text, MatchCatchBallBox.Text, MatchCollectBallBox.Text, MatchThrowOverBox.Text, MatchLowGoalBox.Text, MatchHighGoalBox.Text, Score.Text);
+                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, OverallDefenseBox.Text, ManeuverabilityBox.Text, SpeedBox.Text, OverallAttackBox.Text, RobotDescriptionBox.Text, MatchDriveForwardBox.Text, MatchLowGoalAutoBox.Text, MatchHighGoalAutoBox.Text, MatchPassBallBox.Text, MatchCatchBallBox.Text, MatchCollectBallBox.Text, MatchThrowOverBox.Text, MatchLowGoalBox.Text, MatchHighGoalBox.Text, Score.Text);
                 csv.AppendLine(newLine);
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "MatchData" + ".csv", csv.ToString());
             }
-            if (ScoutDataChange == false && MatchDataChange == false) {
+
+            if (TeamNumberBox.Text == "")
+            {                //Check if number is present
+                MessageBox.Show("Failed: No team number. Please update the data and re-export.");
+            }
+            else if (TeamNameBox.Text == "")
+            {                //Check if name is present
+                MessageBox.Show("Failed: No team name. Please update the data and re-export.");
+            }
+            else if (MatchNumberTextBox.Text == "")
+            {                //Check if name is present
+                MessageBox.Show("Failed: No match number. Please update the data and re-export.");
+            }
+            else if (ScoutDataChange == false && MatchDataChange == false)
+            {
                 MessageBox.Show("Failed: No data to export. Please update the data and re-export.");
             }
             else
             {
+
                 if (ScoutDataChange && MatchDataChange) {
                     MessageBox.Show("Successfully exported:\n 2 data files exported \n Scout Data exported \n Match Data exported");
                 }else if (ScoutDataChange)
@@ -157,7 +172,7 @@ namespace ASSIGNMENT2
         public Boolean MatchDataFilled()
         {
             //Robot Performance any data entered
-            if (OverallDefenseBox.Text + ManeuverabilityBox.Text + SpeedBox.Text + OverallAttackBox.Text + RobotDescriptionBox.Text != "")
+            if (OverallDefenseBox.Text!="Unknown"|| ManeuverabilityBox.Text != "Unknown" || SpeedBox.Text != "Unknown" || OverallAttackBox.Text != "Unknown" || RobotDescriptionBox.Text != "")
             {
                 return true;
             }
@@ -273,6 +288,16 @@ namespace ASSIGNMENT2
             {
                 e.Handled = true;
             }
+        }
+
+        private void HumanControlGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImportMenuButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
