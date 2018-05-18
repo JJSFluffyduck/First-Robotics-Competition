@@ -18,7 +18,10 @@ namespace ASSIGNMENT2
             InitializeComponent();
         }
 
-        //All ComboBox use this funtion
+        //
+        //All ComboBox that in Match Performance and Scouts Detalis use this funtion have correct color for different status
+        //"Unknow" type is orange, "Yes" type is green, and "No" type is red.
+        //
         private void ComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             var cb = ((ComboBox)sender);
@@ -42,6 +45,9 @@ namespace ASSIGNMENT2
             }
         }
 
+        //
+        //Team Number should only except numbers
+        //
         private void TeamNumberBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(Char.IsDigit(e.KeyChar) || e.KeyChar == (char)(Keys.Back)))
@@ -50,6 +56,11 @@ namespace ASSIGNMENT2
             }
         }
 
+        //
+        // Design layout when running this app
+        // All combobox should show as "Unknow" before user choose.
+        // Only Menu Buttons and a welcome page show up at the beginning.
+        //
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.HighGoalBox.SelectedIndex = 0;
@@ -84,26 +95,23 @@ namespace ASSIGNMENT2
             MenuGroupBox.Visible = true;
         }
 
+        //
+        //If user cilck add picture button in robot performance,
+        //app should show a pop-up box show up tp upload robot photo
+        //
         private void AddPictureButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string image = openFileDialog.FileName;
+                // show in robot details which right to add picture button
                 RobotPictureBox.Image = Image.FromFile(@image);
+                // show in team details which is able to see when user choose other button on the menu
                 RobotCopyPictureBox.Image = Image.FromFile(@image);
             }
         }
 
-        private void SaveButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ImportButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ExportMenuButton_Click(object sender, EventArgs e)
         {
@@ -169,6 +177,7 @@ namespace ASSIGNMENT2
 
             return false;
         }
+
         public Boolean MatchDataFilled()
         {
             //Robot Performance any data entered
@@ -189,6 +198,9 @@ namespace ASSIGNMENT2
             return false;
         }
 
+        //
+        //If user click Robot Performance button, the app should show with team details, match number, and robot performance details
+        //
         private void RobotPerformanceButton_Click(object sender, EventArgs e)
         {
             MenuGroupBox.Visible = false;
@@ -201,6 +213,10 @@ namespace ASSIGNMENT2
             ScorePointsGroupBox.Visible = false;
         }
 
+        //
+        //If user click Scouts Details button, the app should show with team details, 
+        //match number,  autonomous details, and human control details
+        //
         private void ScoutsDetailsButton_Click(object sender, EventArgs e)
         {
             MenuGroupBox.Visible = false;
@@ -213,6 +229,9 @@ namespace ASSIGNMENT2
             ScorePointsGroupBox.Visible = false;
         }
 
+        //
+        //If user click Match Performance button, the app should show with team details, match number, and match performance
+        //
         private void MatchPerformanceButton_Click(object sender, EventArgs e)
         {
             MenuGroupBox.Visible = false;
@@ -225,6 +244,9 @@ namespace ASSIGNMENT2
             ScorePointsGroupBox.Visible = false;
         }
 
+        //
+        //If user click Score Points button, the app should show with team details, match number, and score points
+        //
         private void PointButton_Click(object sender, EventArgs e)
         {
             MenuGroupBox.Visible = false;
@@ -237,51 +259,81 @@ namespace ASSIGNMENT2
             ScorePointsGroupBox.Visible = true;
         }
 
+        //
+        //Catch ball should add 10 points
+        //
         private void CatchingButton_Click(object sender, EventArgs e)
         {
             Score.Text = (10 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Auto driving forward should add 5 points
+        //
         private void AutoDrivingForwardButton_Click(object sender, EventArgs e)
         {
             Score.Text = (5 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Auto low goal should add 6 points
+        //
         private void AutoLowGoalButton_Click(object sender, EventArgs e)
         {
             Score.Text = (6 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Auto high goal should add 15 points
+        //
         private void AutoHighGoalButton_Click(object sender, EventArgs e)
         {
             Score.Text = (15 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Low Goal by human control should add 1 point
+        //
         private void LowGoalButton_Click(object sender, EventArgs e)
         {
             Score.Text = (1 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //High Goal by human control should add 10 points
+        //
         private void HighGoalButton_Click(object sender, EventArgs e)
         {
             Score.Text = (10 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Over Middle Bar should add 10 points
+        //
         private void OverMiddleBarButton_Click(object sender, EventArgs e)
         {
             Score.Text = (10 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //First Pass should add 10 points
+        //
         private void FirstPassButton_Click(object sender, EventArgs e)
         {
             Score.Text = (10 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Second Pass should add 20 points
+        //
         private void SecondPassButton_Click(object sender, EventArgs e)
         {
             Score.Text = (20 + Double.Parse(Score.Text)).ToString();
         }
 
+        //
+        //Match Number should only except numbers
+        //
         private void MatchNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(Char.IsDigit(e.KeyChar) || e.KeyChar == (char)(Keys.Back)))
@@ -290,10 +342,6 @@ namespace ASSIGNMENT2
             }
         }
 
-        private void HumanControlGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void ImportMenuButton_Click(object sender, EventArgs e)
         {
