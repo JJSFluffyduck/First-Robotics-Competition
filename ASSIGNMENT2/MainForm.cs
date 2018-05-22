@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+
 
 namespace ASSIGNMENT2
 {
@@ -115,23 +117,27 @@ namespace ASSIGNMENT2
 
         private void ExportMenuButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Scout write:"+ ScoutDataFilled());
-            Boolean ScoutDataChange = ScoutDataFilled();
-            if (ScoutDataChange) {
-                var csv = new StringBuilder();
-
-                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, AutoForwardBox.Text, AutoLowGoalBox.Text, AutoHighGoalBox.Text, PassBallBox.Text, CatchBallBox.Text, PickUpBallBox.Text, MiddleBarBox.Text, LowGoalBox.Text, HighGoalBox.Text);
-                csv.AppendLine(newLine);
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "ScoutData" + ".csv", csv.ToString());
+            //Create save files if not already present
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "ScoutData" + ".csv") == false)
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "ScoutData" + ".csv", "");
             }
-            Console.WriteLine("Match write:" + MatchDataFilled());
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "MatchData" + ".csv") == false)
+            {
+                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "MatchData" + ".csv", "");
+            }
+
+            //Checks if there is scout data to export
+            Boolean ScoutDataChange = ScoutDataFilled();
+            if (ScoutDataChange)
+            {
+                int ScoutPosition =  UpdateFile("ScoutData", string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, AutoForwardBox.Text, AutoLowGoalBox.Text, AutoHighGoalBox.Text, PassBallBox.Text, CatchBallBox.Text, PickUpBallBox.Text, MiddleBarBox.Text, LowGoalBox.Text, HighGoalBox.Text));
+            }
+            
+            //Checks if match data is there to export
             Boolean MatchDataChange = MatchDataFilled();
             if (MatchDataFilled()) {
-                var csv = new StringBuilder();
-
-                var newLine = string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, OverallDefenseBox.Text, ManeuverabilityBox.Text, SpeedBox.Text, OverallAttackBox.Text, RobotDescriptionBox.Text, MatchDriveForwardBox.Text, MatchLowGoalAutoBox.Text, MatchHighGoalAutoBox.Text, MatchPassBallBox.Text, MatchCatchBallBox.Text, MatchCollectBallBox.Text, MatchThrowOverBox.Text, MatchLowGoalBox.Text, MatchHighGoalBox.Text, Score.Text);
-                csv.AppendLine(newLine);
-                File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "MatchData" + ".csv", csv.ToString());
+                int MatchPosition = UpdateFile("MatchData", string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, OverallDefenseBox.Text, ManeuverabilityBox.Text, SpeedBox.Text, OverallAttackBox.Text, RobotDescriptionBox.Text, MatchDriveForwardBox.Text, MatchLowGoalAutoBox.Text, MatchHighGoalAutoBox.Text, MatchPassBallBox.Text, MatchCatchBallBox.Text, MatchCollectBallBox.Text, MatchThrowOverBox.Text, MatchLowGoalBox.Text, MatchHighGoalBox.Text, Score.Text));
             }
 
             if (TeamNumberBox.Text == "")
@@ -143,7 +149,7 @@ namespace ASSIGNMENT2
                 MessageBox.Show("Failed: No team name. Please update the data and re-export.");
             }
             else if (MatchNumberTextBox.Text == "")
-            {                //Check if name is present
+            {                //Check if number is present
                 MessageBox.Show("Failed: No match number. Please update the data and re-export.");
             }
             else if (ScoutDataChange == false && MatchDataChange == false)
@@ -167,6 +173,38 @@ namespace ASSIGNMENT2
 
         }
 
+        //To handle updating file
+        //Handles if the data is already in file, if so it updates it
+        //else adds a new line
+        public int UpdateFile(String FileName, String InputLine)
+        {
+            string[] lines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + FileName + ".csv", Encoding.UTF8);
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var values = lines[i].Split(',');
+
+                //team is already within file OverWrite
+                if (values[0] == TeamNumberBox.Text && values[2]==MatchNumberTextBox.Text)
+                {
+                    lines[i] = InputLine;
+
+                    File.WriteAllLines(
+                        AppDomain.CurrentDomain.BaseDirectory + FileName + ".csv",
+                        lines);
+
+                    return i;
+                }
+            }
+
+            //else if team isnt current there, add a new line
+            File.AppendAllText(
+                AppDomain.CurrentDomain.BaseDirectory + FileName + ".csv",
+                InputLine + Environment.NewLine);
+
+            return -1;
+        }
+
+        //returns if any scout data has been enter
         public Boolean ScoutDataFilled()
         {
             //Scouts details
@@ -178,6 +216,7 @@ namespace ASSIGNMENT2
             return false;
         }
 
+        //checks if any match data has been entered
         public Boolean MatchDataFilled()
         {
             //Robot Performance any data entered
@@ -342,147 +381,97 @@ namespace ASSIGNMENT2
             }
         }
 
-
+        //Handles importing data into the application
+        //Works with root data file (Scoutdata or matchdata located where the exe is stored)
+        //or a external file being added in
         private void ImportMenuButton_Click(object sender, EventArgs e)
         {
+            //Opens a file explorer to grab the file
             OpenFileDialog fdlg = new OpenFileDialog();
             fdlg.Title = "Roborts File Explorer";
             fdlg.InitialDirectory = @"c:\";
             fdlg.Filter = "All files (*.*)|*.*|All files (*.*)|*.*";
             fdlg.FilterIndex = 2;
             fdlg.RestoreDirectory = true;
+
             if (fdlg.ShowDialog() == DialogResult.OK)
             {
-                Console.WriteLine(fdlg.FileName.Split('\\')[fdlg.FileName.Split('\\').Length-1].Split('.')[0]);
-                
-                using (var reader = new StreamReader(fdlg.FileName))
+                String fileName = fdlg.FileName.Split('\\')[fdlg.FileName.Split('\\').Length - 1].Split('.')[0];
+
+                //Gets what data the user wishes to import
+                string UserInputTeam = Interaction.InputBox("What team number do you wish to import?", "Select Team", "");
+                string UserInputMatch = Interaction.InputBox("What match from that team do you wish to import?", "Select Match", "");
+
+                int TeamPosition = -1;
+                string[] lines = File.ReadAllLines(fdlg.FileName, Encoding.UTF8);
+                for (int i = 0; i < lines.Length; i++)
                 {
-                    String fileName = fdlg.FileName.Split('\\')[fdlg.FileName.Split('\\').Length - 1].Split('.')[0];
+                    var values = lines[i].Split(',');
 
-                    List<string> TeamNumber = new List<string>();
-                    List<string> TeamName = new List<string>();
-                    List<string> MatchNumber = new List<string>();
-
-                    if (fileName == "ScoutData")
+                    //Checks if the file contains the data they wish to import
+                    if (values[0] == UserInputTeam && values[2] == UserInputMatch)
                     {
-                        List<string> AutoForward = new List<string>();
-                        List<string> AutoLow = new List<string>();
-                        List<string> AutoHigh = new List<string>();
+                        TeamPosition = i;
 
-                        List<string> HumanPass = new List<string>();
-                        List<string> HumanCatch = new List<string>();
-                        List<string> HumanPickUp = new List<string>();
-                        List<string> HumanMiddle = new List<string>();
-                        List<string> HumanLow = new List<string>();
-                        List<string> HumanHigh = new List<string>();
+                        //Import standard data
+                        TeamNumberBox.Text = values[0];
+                        TeamNameBox.Text = values[1];
+                        MatchNumberTextBox.Text = values[2];
 
-                        while (!reader.EndOfStream)
+                        //loads scout data, if a scout data file has been selected
+                        if (fileName == "ScoutData")
                         {
-                            var line = reader.ReadLine();
-                            var values = line.Split(',');
+                            AutoForwardBox.Text = values[3];
+                            AutoLowGoalBox.Text = values[4];
+                            AutoHighGoalBox.Text = values[5];
 
-                            TeamNumber.Add(values[0]);
-                            TeamName.Add(values[1]);
-                            MatchNumber.Add(values[2]);
+                            PassBallBox.Text = values[6];
+                            CatchBallBox.Text = values[7];
+                            PickUpBallBox.Text = values[8];
+                            MiddleBarBox.Text = values[9];
+                            LowGoalBox.Text = values[10];
+                            HighGoalBox.Text = values[11];
 
-                            AutoForward.Add(values[3]);
-                            AutoLow.Add(values[4]);
-                            AutoHigh.Add(values[5]);
+                            UpdateFile(fileName, lines[i]);
 
-                            HumanPass.Add(values[6]);
-                            HumanCatch.Add(values[7]);
-                            HumanPickUp.Add(values[8]);
-                            HumanMiddle.Add(values[9]);
-                            HumanLow.Add(values[10]);
-                            HumanHigh.Add(values[11]);
+                            MessageBox.Show("Data successfully imported");
                         }
-                        TeamNumberBox.Text = TeamNumber[0];
-                        TeamNameBox.Text = TeamName[0];
-                        MatchNumberTextBox.Text = MatchNumber[0];
-
-                        AutoForwardBox.Text = AutoForward[0];
-                        AutoLowGoalBox.Text = AutoLow[0];
-                        AutoHighGoalBox.Text = AutoHigh[0];
-
-                        PassBallBox.Text = HumanPass[0];
-                        CatchBallBox.Text = HumanCatch[0];
-                        PickUpBallBox.Text = HumanPickUp[0];
-                        MiddleBarBox.Text = HumanMiddle[0];
-                        LowGoalBox.Text = HumanLow[0];
-                        HighGoalBox.Text = HumanHigh[0];
-
-                    }else if (fileName == "MatchData")
-                    {
-                        List<string> OverallDefense = new List<string>();
-                        List<string> Maneuverability = new List<string>();
-                        List<string> Speed = new List<string>();
-                        List<string> OverallAttack = new List<string>();
-                        List<string> RobotDescription = new List<string>();
-
-                        List<string> MatchDriveForward = new List<string>();
-                        List<string> MatchLowGoalAuto = new List<string>();
-                        List<string> MatchHighGoalAuto = new List<string>();
-                        List<string> MatchPassBall = new List<string>();
-                        List<string> MatchCatchBall = new List<string>();
-                        List<string> MatchCollectBall = new List<string>();
-                        List<string> MatchThrowOver = new List<string>();
-                        List<string> MatchLowGoal = new List<string>();
-                        List<string> MatchHighGoal = new List<string>();
-                        List<string> ScoreArray = new List<string>();
-
-                        while (!reader.EndOfStream)
+                        //loads match data, if a match data file has been selected
+                        else if (fileName == "MatchData")
                         {
-                            var line = reader.ReadLine();
-                            var values = line.Split(',');
+                            OverallDefenseBox.Text = values[3];
+                            ManeuverabilityBox.Text = values[4];
+                            SpeedBox.Text = values[5];
+                            OverallAttackBox.Text = values[6];
+                            RobotDescriptionBox.Text = values[7];
 
-                            TeamNumber.Add(values[0]);
-                            TeamName.Add(values[1]);
-                            MatchNumber.Add(values[2]);
+                            MatchDriveForwardBox.Text = values[8];
+                            MatchLowGoalAutoBox.Text = values[9];
+                            MatchHighGoalAutoBox.Text = values[10];
+                            MatchPassBallBox.Text = values[11];
+                            MatchCatchBallBox.Text = values[12];
+                            MatchCollectBallBox.Text = values[13];
+                            MatchThrowOverBox.Text = values[14];
+                            MatchLowGoalBox.Text = values[15];
+                            MatchHighGoalBox.Text = values[16];
+                            Score.Text = values[17];
 
-                            OverallDefense.Add(values[3]);
-                            Maneuverability.Add(values[4]);
-                            Speed.Add(values[5]);
-                            OverallAttack.Add(values[6]);
-                            RobotDescription.Add(values[7]);
+                            UpdateFile(fileName, lines[i]);
 
-                            MatchDriveForward.Add(values[8]);
-                            MatchLowGoalAuto.Add(values[9]);
-                            MatchHighGoalAuto.Add(values[10]);
-                            MatchPassBall.Add(values[11]);
-                            MatchCatchBall.Add(values[12]);
-                            MatchCollectBall.Add(values[13]);
-                            MatchThrowOver.Add(values[14]);
-                            MatchLowGoal.Add(values[15]);
-                            MatchHighGoal.Add(values[16]);
-                            ScoreArray.Add(values[17]);
+                            MessageBox.Show("Data successfully imported");
                         }
-                        TeamNumberBox.Text = TeamNumber[0];
-                        TeamNameBox.Text = TeamName[0];
-                        MatchNumberTextBox.Text = MatchNumber[0];
-
-                        OverallDefenseBox.Text = OverallDefense[0];
-                        ManeuverabilityBox.Text = Maneuverability[0];
-                        SpeedBox.Text = Speed[0];
-                        OverallAttackBox.Text = OverallAttack[0];
-                        RobotDescriptionBox.Text = RobotDescription[0];
-
-                        MatchDriveForwardBox.Text = MatchDriveForward[0];
-                        MatchLowGoalAutoBox.Text = MatchLowGoalAuto[0];
-                        MatchHighGoalAutoBox.Text = MatchHighGoalAuto[0];
-                        MatchPassBallBox.Text = MatchPassBall[0];
-                        MatchCatchBallBox.Text = MatchCatchBall[0];
-                        MatchCollectBallBox.Text = MatchCollectBall[0];
-                        MatchThrowOverBox.Text = MatchThrowOver[0];
-                        MatchLowGoalBox.Text = MatchLowGoal[0];
-                        MatchHighGoalBox.Text = MatchHighGoal[0];
-                        Score.Text = ScoreArray[0];
-                    }
-                    else
-                    {
-                        MessageBox.Show("File import failed. File was invalid, please try again.");
+                        else
+                        {
+                            //Errors out if the file selected isnt a reckonised file type
+                            MessageBox.Show("File import failed. File was invalid, please try again.");
+                        }
                     }
                 }
 
+                if (TeamPosition == -1) {
+                    //Errors out if it was unable to find the match for the selected team
+                    MessageBox.Show("Unable to find that match for that team, please check the data source.");
+                }
             }
         }
     }
