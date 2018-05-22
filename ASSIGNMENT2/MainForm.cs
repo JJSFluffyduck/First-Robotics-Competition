@@ -127,12 +127,14 @@ namespace ASSIGNMENT2
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "MatchData" + ".csv", "");
             }
 
+            //Checks if there is scout data to export
             Boolean ScoutDataChange = ScoutDataFilled();
             if (ScoutDataChange)
             {
                 int ScoutPosition =  UpdateFile("ScoutData", string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, AutoForwardBox.Text, AutoLowGoalBox.Text, AutoHighGoalBox.Text, PassBallBox.Text, CatchBallBox.Text, PickUpBallBox.Text, MiddleBarBox.Text, LowGoalBox.Text, HighGoalBox.Text));
             }
             
+            //Checks if match data is there to export
             Boolean MatchDataChange = MatchDataFilled();
             if (MatchDataFilled()) {
                 int MatchPosition = UpdateFile("MatchData", string.Join(",", TeamNumberBox.Text, TeamNameBox.Text, MatchNumberTextBox.Text, OverallDefenseBox.Text, ManeuverabilityBox.Text, SpeedBox.Text, OverallAttackBox.Text, RobotDescriptionBox.Text, MatchDriveForwardBox.Text, MatchLowGoalAutoBox.Text, MatchHighGoalAutoBox.Text, MatchPassBallBox.Text, MatchCatchBallBox.Text, MatchCollectBallBox.Text, MatchThrowOverBox.Text, MatchLowGoalBox.Text, MatchHighGoalBox.Text, Score.Text));
@@ -147,7 +149,7 @@ namespace ASSIGNMENT2
                 MessageBox.Show("Failed: No team name. Please update the data and re-export.");
             }
             else if (MatchNumberTextBox.Text == "")
-            {                //Check if name is present
+            {                //Check if number is present
                 MessageBox.Show("Failed: No match number. Please update the data and re-export.");
             }
             else if (ScoutDataChange == false && MatchDataChange == false)
@@ -171,6 +173,9 @@ namespace ASSIGNMENT2
 
         }
 
+        //To handle updating file
+        //Handles if the data is already in file, if so it updates it
+        //else adds a new line
         public int UpdateFile(String FileName, String InputLine)
         {
             string[] lines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + FileName + ".csv", Encoding.UTF8);
@@ -191,6 +196,7 @@ namespace ASSIGNMENT2
                 }
             }
 
+            //else if team isnt current there, add a new line
             File.AppendAllText(
                 AppDomain.CurrentDomain.BaseDirectory + FileName + ".csv",
                 InputLine + Environment.NewLine);
@@ -198,6 +204,7 @@ namespace ASSIGNMENT2
             return -1;
         }
 
+        //returns if any scout data has been enter
         public Boolean ScoutDataFilled()
         {
             //Scouts details
@@ -209,6 +216,7 @@ namespace ASSIGNMENT2
             return false;
         }
 
+        //checks if any match data has been entered
         public Boolean MatchDataFilled()
         {
             //Robot Performance any data entered
@@ -373,19 +381,24 @@ namespace ASSIGNMENT2
             }
         }
 
-
+        //Handles importing data into the application
+        //Works with root data file (Scoutdata or matchdata located where the exe is stored)
+        //or a external file being added in
         private void ImportMenuButton_Click(object sender, EventArgs e)
         {
+            //Opens a file explorer to grab the file
             OpenFileDialog fdlg = new OpenFileDialog();
             fdlg.Title = "Roborts File Explorer";
             fdlg.InitialDirectory = @"c:\";
             fdlg.Filter = "All files (*.*)|*.*|All files (*.*)|*.*";
             fdlg.FilterIndex = 2;
             fdlg.RestoreDirectory = true;
+
             if (fdlg.ShowDialog() == DialogResult.OK)
             {
                 String fileName = fdlg.FileName.Split('\\')[fdlg.FileName.Split('\\').Length - 1].Split('.')[0];
 
+                //Gets what data the user wishes to import
                 string UserInputTeam = Interaction.InputBox("What team number do you wish to import?", "Select Team", "");
                 string UserInputMatch = Interaction.InputBox("What match from that team do you wish to import?", "Select Match", "");
 
@@ -395,15 +408,17 @@ namespace ASSIGNMENT2
                 {
                     var values = lines[i].Split(',');
 
-                    //team is already within file OverWrite
+                    //Checks if the file contains the data they wish to import
                     if (values[0] == UserInputTeam && values[2] == UserInputMatch)
                     {
                         TeamPosition = i;
 
+                        //Import standard data
                         TeamNumberBox.Text = values[0];
                         TeamNameBox.Text = values[1];
                         MatchNumberTextBox.Text = values[2];
 
+                        //loads scout data, if a scout data file has been selected
                         if (fileName == "ScoutData")
                         {
                             AutoForwardBox.Text = values[3];
@@ -421,6 +436,7 @@ namespace ASSIGNMENT2
 
                             MessageBox.Show("Data successfully imported");
                         }
+                        //loads match data, if a match data file has been selected
                         else if (fileName == "MatchData")
                         {
                             OverallDefenseBox.Text = values[3];
@@ -446,12 +462,14 @@ namespace ASSIGNMENT2
                         }
                         else
                         {
+                            //Errors out if the file selected isnt a reckonised file type
                             MessageBox.Show("File import failed. File was invalid, please try again.");
                         }
                     }
                 }
 
                 if (TeamPosition == -1) {
+                    //Errors out if it was unable to find the match for the selected team
                     MessageBox.Show("Unable to find that match for that team, please check the data source.");
                 }
             }
